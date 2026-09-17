@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reggae Pot Homepage Concepts</title>
+<meta name="description" content="Two order-first homepage concepts for Reggae Pot Jamaican Grill, Centennial and Denver.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@500;600;700&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0D0B;--ink-2:#1A1815;
+  --bone:#F6F1E4;--bone-2:#DDD5C2;--bone-3:#A79E8A;
+  --green:#00903C;--green-d:#0A6B2D;--yellow:#FCF000;--red:#C8321F;
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--bone);
+  font:400 16px/1.65 Karla,system-ui,"Segoe UI",Roboto,sans-serif;
+  padding-block:clamp(32px,6vw,72px);padding-inline:clamp(18px,4vw,40px);
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto}
+h1,h2{margin:0;font-family:"Alfa Slab One",Georgia,serif;font-weight:400;line-height:1.05}
+a{color:inherit}
+.stripe{height:6px;display:grid;grid-template-columns:repeat(3,1fr);max-width:180px;
+  margin-bottom:clamp(20px,3vw,28px)}
+.stripe i{display:block}
+.stripe i:nth-child(1){background:var(--green)}
+.stripe i:nth-child(2){background:var(--yellow)}
+.stripe i:nth-child(3){background:var(--red)}
+.kick{display:block;font:600 12px/1 "Barlow Condensed",sans-serif;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--yellow);margin-bottom:14px}
+h1{font-size:clamp(32px,5.4vw,58px)}
+.lede{margin:18px 0 0;max-width:62ch;color:var(--bone-2);font-size:16.5px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.4vw,26px);
+  margin-top:clamp(30px,4.4vw,52px)}
+.card{display:flex;flex-direction:column;background:var(--ink-2);border:3px solid var(--bone);
+  text-decoration:none;color:inherit;
+  transition:transform 160ms var(--ease),box-shadow 160ms var(--ease)}
+.card:nth-child(1){box-shadow:8px 8px 0 var(--green)}
+.card:nth-child(2){box-shadow:8px 8px 0 var(--red)}
+.card__sw{display:grid;grid-template-columns:repeat(4,1fr);height:74px}
+.card__sw i{display:block}
+.card__b{padding:clamp(18px,2.4vw,26px);display:flex;flex-direction:column;flex:1 1 auto}
+.card h2{font-size:clamp(21px,2.4vw,28px)}
+.card p{margin:12px 0 0;color:var(--bone-2);font-size:15px;flex:1 1 auto}
+.card__go{display:inline-flex;align-items:center;gap:9px;margin-top:20px;
+  font:700 12px/1 "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--yellow)}
+.card:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+.note{margin-top:clamp(30px,4vw,48px);padding-top:22px;border-top:2px solid #2A2621;
+  color:var(--bone-3);font-size:14px;max-width:70ch}
+.note a{color:var(--bone-2)}
+@media (hover:hover) and (pointer:fine){
+  .card:hover{transform:translate(-3px,-3px)}
+  .card:nth-child(1):hover{box-shadow:11px 11px 0 var(--green)}
+  .card:nth-child(2):hover{box-shadow:11px 11px 0 var(--red)}
+}
+@media (max-width:720px){.grid{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition-duration:1ms !important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="stripe" aria-hidden="true"><i></i><i></i><i></i></span>
+  <span class="kick">Reggae Pot Jamaican Grill</span>
+  <h1>Homepage Concepts</h1>
+  <p class="lede">Two order-first directions for the Centennial and Denver kitchens. Both do the
+    same job, make ordering online the obvious next step, and both carry the same working tray
+    builder with the real menu and the real prices.</p>
+
+  <div class="grid">
+    <a class="card" href="mockup-soulkitchen.html">
+      <span class="card__sw" aria-hidden="true">
+        <i style="background:#FBF7EE"></i><i style="background:#0A6B2D"></i>
+        <i style="background:#FCF000"></i><i style="background:#9E2A20"></i>
+      </span>
+      <span class="card__b">
+        <h2>Concept 1: Light Editorial</h2>
+        <p>Cream ground, one dramatic plate at a time, a bento food wall and oversized display
+          type. Quiet and appetite led.</p>
+        <span class="card__go">Open Concept 1 &rarr;</span>
+      </span>
+    </a>
+
+    <a class="card" href="mockup-dancehall.html">
+      <span class="card__sw" aria-hidden="true">
+        <i style="background:#0E0D0B"></i><i style="background:#0A6B2D"></i>
+        <i style="background:#FCF000"></i><i style="background:#C8321F"></i>
+      </span>
+      <span class="card__b">
+        <h2>Concept 2: Dancehall</h2>
+        <p>A 1970s Jamaican dancehall poster. Black as structure, alternating saturated slabs,
+          hand painted signboards and a running ticker.</p>
+        <span class="card__go">Open Concept 2 &rarr;</span>
+      </span>
+    </a>
+  </div>
+
+  <p class="note">Review builds, not deployed. Addresses, phone numbers and opening hours come
+    from the client's own locations page; every price comes from the live ordering storefront.
+    The reasoning behind concept 2, including the three reference sites it was built from, is in
+    <a href="_design-scan.md">_design-scan.md</a>.</p>
+</div>
+</body>
+</html>
