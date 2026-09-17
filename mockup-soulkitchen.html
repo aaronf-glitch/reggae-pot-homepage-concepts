@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reggae Pot Jamaican Grill | Order Jerk, Curry and Oxtail in Centennial and Denver</title>
+<meta name="description" content="Order Jamaican food online from Reggae Pot Jamaican Grill. Jerk chicken, curry goat and oxtail from our Centennial and Denver kitchens. Order ahead and skip the line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   REGGAE POT, light.
+   Every colour here was sampled out of the restaurant's own logo file:
+   green #00903C, yellow #FCF000, flame red #B43C3C and black. Nothing invented.
+   The layout keeps the good bones of the reference: one dramatic plate at a
+   time, oversized display type, and a menu set as a printed list rather than
+   a grid of cards. The logo itself is used as supplied and is never restyled.
+   ============================================================ */
+:root{
+  --cream:#FBF7EE;--cream-2:#F3EDDF;--paper:#FFFFFF;
+  --ink:#141210;--ink-2:#413B33;--ink-3:#6B6357;
+  --line:#DED6C4;
+  --green:#00903C;      /* logo green, fills and large type */
+  --green-d:#0A6B2D;    /* the same green darkened enough for small text */
+  --yellow:#FCF000;     /* logo yellow, a fill only, always under black text */
+  --red:#B43C3C;        /* the flame in the logo, for accents on cream */
+  --red-d:#9E2A20;      /* the same flame darkened until white text clears 4.5:1 on it */
+  --red-x:#7F1F17;      /* pressed and hover */
+  --wrap:1220px;--gut:clamp(18px,4vw,40px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);
+  font:400 16px/1.7 Archivo,system-ui,"Segoe UI",Roboto,sans-serif;overflow-x:clip;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-height:.95;
+  text-transform:uppercase;letter-spacing:.012em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.eyebrow{display:block;font:700 11px/1 Archivo,sans-serif;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--red-d)}
+.script{font-family:Caveat,cursive;font-weight:700;text-transform:none;letter-spacing:0;
+  color:var(--red)}
+
+/* the flag running green, yellow, red */
+.stripe{height:6px;display:grid;grid-template-columns:repeat(3,1fr)}
+.stripe i{display:block}
+.stripe i:nth-child(1){background:var(--green)}
+.stripe i:nth-child(2){background:var(--yellow)}
+.stripe i:nth-child(3){background:var(--red)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:52px;padding:0 28px;text-decoration:none;cursor:pointer;
+  font:700 12px/1 Archivo,sans-serif;letter-spacing:.17em;text-transform:uppercase;
+  border:2px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:999px;
+  transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease}
+.btn--green{background:var(--green-d);border-color:var(--green-d);color:#FFFFFF}
+.btn--red{background:var(--red-d);border-color:var(--red-d);color:#FFFFFF}
+.btn--yellow{background:var(--yellow);border-color:var(--ink);color:var(--ink)}
+.btn--sm{min-height:44px;padding:0 20px;font-size:11px}
+.btn:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* ---------- the strip above the header ---------- */
+.util{background:var(--ink)}
+.util__in{max-width:var(--wrap);margin:0 auto;padding:8px var(--gut);
+  display:flex;flex-wrap:wrap;gap:4px 26px;align-items:center;justify-content:center;
+  font:600 11px/1.5 Archivo,sans-serif;letter-spacing:.13em;text-transform:uppercase;
+  color:#F0EADC}
+.util a:not(.btn){display:inline-flex;align-items:center;min-height:32px;
+  text-decoration:none;color:#F0EADC}
+.util i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--yellow);
+  margin-right:8px}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(251,247,238,.96);
+  backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.hdr__in{max-width:var(--wrap);margin:0 auto;padding:12px var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:20px}
+.mark{display:flex;align-items:center;min-height:44px;text-decoration:none;flex:0 0 auto}
+.mark img{width:clamp(180px,20vw,240px);height:auto}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a:not(.btn){font:700 11.5px/1 Archivo,sans-serif;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--ink-2);text-decoration:none;
+  display:inline-flex;align-items:center;min-height:34px;transition:color 160ms ease}
+.burger{display:none;width:46px;height:46px;background:var(--paper);border:2px solid var(--ink);
+  border-radius:12px;cursor:pointer;padding:0}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:#0B0907;isolation:isolate;overflow:clip;
+  /* 1280 is the native width of the footage. Past that the clip would be enlarged, which is
+     what makes it look zoomed and soft, so the banner simply stops there. */
+  max-width:1280px;margin:clamp(14px,1.8vw,26px) auto;border-radius:clamp(18px,2vw,30px);
+  display:grid;place-items:center;
+  /* exactly the clip's own shape, so cover has nothing to scale and nothing to crop */
+  aspect-ratio:16/9;padding:clamp(24px,3vw,44px) 0}
+.hero__bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#0B0907}
+@media (max-width:1320px){.hero{margin-inline:var(--gut);border-radius:clamp(14px,2vw,22px)}}
+@media (max-width:640px){.hero{margin-inline:0;border-radius:0;aspect-ratio:auto;
+  min-height:min(76vh,600px)}}
+.hero__bg video{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+/* No mask over the footage. The type carries its own panel instead, so the clip plays in the
+   clear everywhere except directly behind the words. */
+.hero__card{background:rgba(9,8,6,.66);backdrop-filter:blur(3px);
+  border:1px solid rgba(255,255,255,.10);border-radius:26px;
+  padding:clamp(24px,3.2vw,44px) clamp(20px,3.4vw,52px);
+  display:grid;justify-items:center;gap:clamp(18px,2.2vw,26px)}
+.hero__in{position:relative;z-index:1;max-width:min(920px,100%);margin:0 auto;
+  padding-inline:var(--gut);text-align:center}
+.hero .script{display:block;font-size:clamp(26px,3vw,40px);color:#FFD64A}
+.hero h1{margin-top:6px;font-size:clamp(48px,8.6vw,120px);color:#FFFFFF}
+.hero h1 span{display:block}
+.hero h1 .gr{color:#4FD87E}
+.hero h1 em{display:block;font-style:normal;font-size:.26em;margin-top:18px;letter-spacing:.09em;
+  color:#F2EBDC}
+.hero__sub{margin:16px auto 0;max-width:46ch;color:#FFFFFF;font-size:18px;
+  text-shadow:0 1px 3px rgba(0,0,0,.55)}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+/* ---------- the promise band ---------- */
+.band{background:var(--red-d)}
+.band__in{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut);
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.band__c{padding:clamp(22px,2.8vw,34px) clamp(10px,2vw,26px);text-align:center;
+  border-left:1px solid rgba(255,255,255,.28)}
+.band__c:first-child{border-left:0}
+.band__c svg{width:30px;height:30px;margin:0 auto 12px;display:block;color:#FFD9D4}
+.band__c b{display:block;font:400 clamp(19px,2vw,26px)/1.1 Anton,sans-serif;
+  text-transform:uppercase;color:#FFFFFF;letter-spacing:.02em}
+.band__c span{display:block;margin-top:7px;font-size:14px;color:#FBEDEB;line-height:1.55}
+
+/* ---------- section heads ---------- */
+.sec{padding:clamp(50px,6.6vw,96px) 0}
+.sec--paper{background:var(--paper);border-top:1px solid var(--line)}
+.sec--cream{background:var(--cream-2);border-top:1px solid var(--line)}
+.head{text-align:center;max-width:64ch;margin:0 auto clamp(28px,3.6vw,48px);overflow-x:clip}
+.head h2{margin-top:10px;font-size:clamp(30px,4.6vw,62px);color:var(--ink)}
+.head h2::after{content:"";display:block;width:86px;height:6px;margin:18px auto 0;border-radius:99px;
+  background:linear-gradient(90deg,var(--green) 0 33.33%,var(--yellow) 33.33% 66.66%,var(--red-d) 66.66% 100%)}
+.head p{margin-top:15px;color:var(--ink-3);font-size:16px}
+
+/* ---------- the menu, set as a printed list ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  margin-bottom:clamp(26px,3.4vw,44px)}
+.tab{background:var(--paper);border:2px solid var(--line);color:var(--ink-2);
+  min-height:44px;padding:0 17px;cursor:pointer;border-radius:999px;
+  font:700 11px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  transition:background-color 160ms ease,color 160ms ease,border-color 160ms ease}
+.tab[aria-pressed="true"]{background:var(--green-d);border-color:var(--green-d);color:#FFFFFF}
+.tab:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.m__group{display:none}
+.m__group.is-on{display:block}
+.m__h{font-size:clamp(21px,2.3vw,31px);color:var(--ink);text-align:center}
+.m__h::after{content:"";display:block;width:64px;height:5px;margin:14px auto 0;
+  background:linear-gradient(90deg,var(--green) 0 33.33%,var(--yellow) 33.33% 66.66%,var(--red) 66.66% 100%)}
+.m__blurb{margin:14px auto clamp(24px,3vw,36px);text-align:center;color:var(--ink-3);
+  font-size:15px;max-width:52ch}
+.m__list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(18px,2.4vw,32px) clamp(34px,5vw,80px)}
+.m__row{display:grid;grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:"n p" "d d";column-gap:14px;
+  padding-bottom:15px;border-bottom:1px dashed var(--line)}
+.m__n{grid-area:n;font:400 19px/1.25 Anton,sans-serif;text-transform:uppercase;
+  letter-spacing:.02em;color:var(--ink)}
+.m__p{grid-area:p;font:400 19px/1.25 Anton,sans-serif;color:var(--green-d);white-space:nowrap}
+.m__alt{display:block;font:600 9.5px/1.4 Archivo,sans-serif;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--red);text-align:right}
+.m__d{grid-area:d;margin-top:5px;font-size:14.5px;line-height:1.6;color:var(--ink-3)}
+.m__foot{margin-top:clamp(28px,3.6vw,44px);text-align:center}
+.m__note{margin-top:15px;font-size:13.5px;color:var(--ink-3)}
+
+/* ---------- body copy set in columns so a wide screen does not give 120 character lines ---- */
+.prose{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(22px,3vw,44px)}
+.prose figure{margin:0 0 16px;border:3px solid var(--ink);border-radius:16px;overflow:hidden}
+.prose figure img{width:100%;aspect-ratio:16/11;object-fit:cover;display:block}
+.prose h3{font-size:clamp(19px,2vw,25px);color:var(--ink)}
+.prose h3::after{content:"";display:block;width:48px;height:4px;margin:12px 0 0;
+  background:linear-gradient(90deg,var(--green) 0 33.33%,var(--yellow) 33.33% 66.66%,var(--red) 66.66% 100%)}
+.prose p{margin-top:14px;color:var(--ink-2);font-size:15.5px;line-height:1.75}
+
+/* ---------- the questions people actually type ---------- */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:10px}
+.faq details{background:var(--paper);border:2px solid var(--line);border-radius:14px;
+  padding:0 clamp(14px,2vw,22px)}
+.faq summary{cursor:pointer;list-style:none;padding:17px 0;
+  font:700 16px/1.45 Archivo,sans-serif;color:var(--ink);
+  display:flex;align-items:flex-start;justify-content:space-between;gap:14px;min-height:34px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 auto;font:400 22px/1 Anton,sans-serif;color:var(--green-d)}
+.faq details[open] summary::after{content:"\2013"}
+.faq details[open] summary{border-bottom:1px dashed var(--line)}
+.faq p{padding:14px 0 18px;color:var(--ink-2);font-size:15.5px;line-height:1.75}
+@media (max-width:900px){.prose{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- the food wall ----------
+   Explicit areas rather than auto-placement, so the mosaic tiles exactly and no row is ever
+   left with a hole or a single stranded tile. */
+.fw{display:grid;gap:clamp(8px,1vw,14px);
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:repeat(4,clamp(132px,13.6vw,208px));
+  grid-template-areas:
+    "a a b c"
+    "a a d d"
+    "e f f g"
+    "e h h g"}
+.fw__t{position:relative;margin:0;overflow:hidden;border-radius:18px;background:var(--ink);
+  border:3px solid var(--ink);min-height:0}
+.fw__t--a{grid-area:a}.fw__t--b{grid-area:b}.fw__t--c{grid-area:c}.fw__t--d{grid-area:d}
+.fw__t--e{grid-area:e}.fw__t--f{grid-area:f}.fw__t--g{grid-area:g}.fw__t--h{grid-area:h}
+.fw__t img{width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 620ms var(--ease)}
+.fw__t::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,7,5,0) 30%,rgba(8,7,5,.42) 58%,rgba(8,7,5,.94) 100%)}
+.fw__t figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:clamp(12px,1.5vw,18px);text-align:left}
+.fw__t figcaption b{display:block;font:400 clamp(16px,1.6vw,22px)/1.1 Anton,sans-serif;
+  text-transform:uppercase;letter-spacing:.02em;color:#FFFFFF;
+  text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.fw__sub{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:#EFE9DB;
+  text-shadow:0 1px 4px rgba(0,0,0,.6)}
+/* the big tile carries more, so it gets more room to breathe */
+.fw__t--a figcaption{padding:clamp(16px,2vw,26px)}
+.fw__t--a figcaption b{font-size:clamp(22px,2.4vw,34px)}
+
+@media (max-width:900px){
+  .fw{grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:repeat(5,clamp(126px,21vw,190px));
+    grid-template-areas:"a a" "b c" "d d" "e f" "g h"}
+}
+@media (max-width:560px){
+  .fw{grid-template-columns:minmax(0,1fr);
+    grid-template-rows:repeat(8,clamp(190px,58vw,260px));
+    grid-template-areas:"a" "b" "c" "d" "e" "f" "g" "h"}
+}
+/* ---------- how the wall arrives ---------- */
+.js-anim .fw__t.reveal{opacity:0;transform:none;
+  clip-path:inset(14% 14% 14% 14% round 18px);
+  transition:opacity 760ms var(--ease), clip-path 860ms var(--ease)}
+.js-anim .fw__t.reveal img{transform:scale(1.14);filter:blur(7px) saturate(.78);
+  transition:transform 1100ms var(--ease), filter 820ms var(--ease)}
+.js-anim .fw__t.reveal figcaption{opacity:0;transform:translateY(14px);
+  transition:opacity 620ms var(--ease) 260ms, transform 620ms var(--ease) 260ms}
+.js-anim .fw__t.reveal.is-in{opacity:1;clip-path:inset(0% 0% 0% 0% round 18px)}
+.js-anim .fw__t.reveal.is-in img{transform:none;filter:none}
+.js-anim .fw__t.reveal.is-in figcaption{opacity:1;transform:none}
+
+/* down the diagonal, not in source order */
+.js-anim .fw__t--a{transition-delay:0ms}
+.js-anim .fw__t--a img{transition-delay:0ms}
+.js-anim .fw__t--b{transition-delay:90ms}
+.js-anim .fw__t--b img{transition-delay:90ms}
+.js-anim .fw__t--c{transition-delay:170ms}
+.js-anim .fw__t--c img{transition-delay:170ms}
+.js-anim .fw__t--d{transition-delay:240ms}
+.js-anim .fw__t--d img{transition-delay:240ms}
+.js-anim .fw__t--e{transition-delay:160ms}
+.js-anim .fw__t--e img{transition-delay:160ms}
+.js-anim .fw__t--f{transition-delay:300ms}
+.js-anim .fw__t--f img{transition-delay:300ms}
+.js-anim .fw__t--g{transition-delay:380ms}
+.js-anim .fw__t--g img{transition-delay:380ms}
+.js-anim .fw__t--h{transition-delay:440ms}
+.js-anim .fw__t--h img{transition-delay:440ms}
+
+/* the big plate keeps moving, very slowly, once it has arrived */
+@keyframes fw-drift{
+  0%{transform:scale(1) translate3d(0,0,0)}
+  50%{transform:scale(1.055) translate3d(-1.2%,-1.1%,0)}
+  100%{transform:scale(1) translate3d(0,0,0)}
+}
+.js-anim .fw__t--a.is-in img{animation:fw-drift 26s var(--ease) 1.2s infinite}
+
+@media (hover:hover) and (pointer:fine){
+  .fw__t{transition:border-color 220ms var(--ease)}
+  .fw__t:hover{border-color:var(--red-d)}
+  .fw__t:hover img{transform:scale(1.06);animation-play-state:paused}
+  .fw__t:hover figcaption{transform:translateY(-3px)}
+  .fw__t figcaption{transition:transform 320ms var(--ease)}
+}
+@media (prefers-reduced-motion:reduce){
+  .js-anim .fw__t.reveal,
+  .js-anim .fw__t.reveal.is-in{clip-path:none}
+  .js-anim .fw__t.reveal img,
+  .js-anim .fw__t.reveal figcaption{filter:none;transform:none;opacity:1;animation:none}
+}
+
+/* ---------- the order builder, brought over from the working prototype ---------- */
+.order__in{display:grid;grid-template-columns:minmax(0,1fr) 340px;
+  gap:clamp(20px,2.4vw,34px);align-items:start}
+.where{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--cream-2);
+  border:2px solid var(--line);border-radius:14px;padding:11px 13px;margin-bottom:16px}
+.where__l{font:700 10.5px/1.3 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3)}
+.seg{display:flex;background:var(--paper);border:2px solid var(--line);border-radius:11px;padding:4px;gap:4px}
+.seg button{background:transparent;color:var(--ink-2);border:0;border-radius:8px;padding:10px 16px;
+  cursor:pointer;font:700 12.5px/1 Archivo,sans-serif;letter-spacing:.07em;text-transform:uppercase;
+  min-height:40px;transition:background-color 150ms ease,color 150ms ease}
+.seg button[aria-pressed="true"]{background:var(--green-d);color:#FFFFFF}
+.seg button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.where__s{margin-left:auto;display:inline-flex;align-items:center;gap:7px;
+  font:700 10.5px/1 Archivo,sans-serif;letter-spacing:.09em;text-transform:uppercase;
+  padding:9px 13px;border-radius:999px;border:2px solid transparent;min-height:34px}
+.where__s[hidden]{display:none !important}
+.where__s i{width:8px;height:8px;border-radius:50%;display:block}
+
+.cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.cat{background:var(--paper);color:var(--ink-2);border:2px solid var(--line);border-radius:999px;
+  padding:0 16px;min-height:42px;cursor:pointer;
+  font:700 11.5px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;
+  transition:background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.cat[aria-pressed="true"]{background:var(--red-d);color:#FFFFFF;border-color:var(--red-d)}
+.cat:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:13px}
+/* The cards are rebuilt from scratch on every category switch, so their motion is an
+   animation rather than an observer class: it replays on every render, which also gives the
+   category switch some life.
+   It animates TRANSFORM ONLY, never opacity. A hidden browser tab freezes the animation
+   timeline, and with a fill mode holding the first frame that would leave the whole menu at
+   opacity 0 for anyone who opened the page in a background tab. Moving only the transform
+   means the worst case is a card sitting 16px low and very slightly small: always readable,
+   never invisible. */
+@keyframes item-in{from{transform:translateY(16px) scale(.97)}
+  to{transform:none}}
+.js-anim #menu.is-live .item{animation:item-in 460ms var(--ease) both}
+.js-anim #menu.is-live .item:nth-child(2){animation-delay:40ms}
+.js-anim #menu.is-live .item:nth-child(3){animation-delay:80ms}
+.js-anim #menu.is-live .item:nth-child(4){animation-delay:120ms}
+.js-anim #menu.is-live .item:nth-child(5){animation-delay:155ms}
+.js-anim #menu.is-live .item:nth-child(6){animation-delay:190ms}
+.js-anim #menu.is-live .item:nth-child(7){animation-delay:220ms}
+.js-anim #menu.is-live .item:nth-child(8){animation-delay:250ms}
+.js-anim #menu.is-live .item:nth-child(9){animation-delay:275ms}
+.js-anim #menu.is-live .item:nth-child(10){animation-delay:300ms}
+.js-anim #menu.is-live .item:nth-child(11){animation-delay:320ms}
+.js-anim #menu.is-live .item:nth-child(n+12){animation-delay:340ms}
+@media (prefers-reduced-motion:reduce){
+  .js-anim #menu.is-live .item{animation:none}
+}
+.item{background:var(--paper);border:2px solid var(--line);border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column;transition:border-color 160ms ease}
+.item.is-in{border-color:var(--red-d)}
+.item__b{padding:13px 14px 14px;display:flex;flex-direction:column;flex:1 1 auto}
+.item h3{font-size:18px;color:var(--ink)}
+.item .desc{margin-top:5px;font-size:13.5px;color:var(--ink-3);flex:1 1 auto}
+.item .veg{display:inline-block;margin-top:8px;font:700 9px/1 Archivo,sans-serif;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--green-d);border:1.5px solid var(--green-d);
+  border-radius:99px;padding:5px 8px}
+.item__r{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px}
+.item__p{font:400 21px/1 Anton,sans-serif;color:var(--red-d)}
+.add{display:inline-flex;align-items:center;gap:7px;background:var(--red-d);color:#FFFFFF;border:0;
+  border-radius:999px;padding:0 16px;min-height:40px;cursor:pointer;
+  font:700 11px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;
+  transition:background-color 150ms ease,transform 130ms ease-out}
+.add:active{transform:scale(.94)}
+.add:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.qty{display:flex;align-items:center;gap:4px;background:var(--cream-2);border:2px solid var(--line);
+  border-radius:999px;padding:3px}
+.qty button{width:34px;height:34px;border-radius:50%;border:0;background:var(--paper);color:var(--ink);
+  cursor:pointer;font:700 17px/1 Archivo,sans-serif;transition:background-color 150ms ease}
+.qty button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.qty span{min-width:22px;text-align:center;font:700 14px/1 Archivo,sans-serif}
+
+.tray{position:sticky;top:96px;background:var(--paper);border:3px solid var(--ink);
+  border-radius:18px;overflow:hidden}
+.tray__h{background:var(--yellow);color:var(--ink);padding:14px 16px}
+.tray__h h3{font-size:22px}
+.tray__h span{display:block;margin-top:3px;font:700 10px/1.3 Archivo,sans-serif;letter-spacing:.13em;
+  text-transform:uppercase;color:#4A4415}
+.tray__b{padding:12px 16px;max-height:44vh;overflow-y:auto}
+.tray__empty{padding:22px 4px;text-align:center;color:var(--ink-3);font-size:14.5px}
+.tray__l li{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.tray__l li:last-child{border-bottom:0}
+.tray__n{flex:1 1 auto;font-size:14.5px;line-height:1.35}
+.tray__n b{display:block;font-weight:700;color:var(--ink)}
+.tray__n small{color:var(--ink-3);font-size:12.5px}
+.tray__x{background:none;border:0;color:var(--ink-3);cursor:pointer;font-size:19px;line-height:1;
+  min-width:34px;min-height:34px;border-radius:8px;transition:color 150ms ease}
+.tray__x:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.tray__f{border-top:2px solid var(--line);padding:14px 16px 16px;background:var(--cream)}
+.tray__t{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px}
+.tray__t span{font:700 11px/1 Archivo,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+.tray__t b{font:400 32px/1 Anton,sans-serif;color:var(--red-d)}
+.tray__f .btn{width:100%}
+.tray__note{margin-top:10px;font-size:12.5px;line-height:1.5;color:var(--ink-3)}
+/* the printable menu */
+.getpdf{margin-top:clamp(22px,2.8vw,32px);display:flex;flex-wrap:wrap;gap:14px;
+  align-items:center;justify-content:center;text-align:center}
+.getpdf p{font-size:13.5px;color:var(--ink-3);max-width:44ch}
+.getpdf .btn{gap:11px}
+.getpdf svg{width:15px;height:15px;flex:0 0 auto}
+
+.cnt{display:inline-grid;place-items:center;min-width:21px;height:21px;border-radius:999px;
+  background:var(--ink);color:var(--yellow);font:700 11px/1 Archivo,sans-serif;padding:0 6px}
+.cnt[hidden]{display:none !important}
+
+/* ---------- the two kitchens ---------- */
+.kits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.6vw,32px)}
+.kit{border:3px solid var(--ink);border-radius:22px;overflow:hidden;background:var(--paper)}
+.kit img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.kit__b{padding:clamp(20px,2.6vw,30px)}
+.kit h3{font-size:clamp(22px,2.4vw,30px);color:var(--ink)}
+.kit p{margin-top:9px;color:var(--ink-3);font-size:15px}
+.kit .btn{margin-top:18px}
+
+/* ---------- catering, over a photograph of the spread ----------
+   Scrim and photograph both live in one background shorthand. The earlier version put the
+   photograph on a pseudo-element at z-index -2, which sits behind the element's own opaque
+   background and so never painted at all. */
+.cater{position:relative;
+  background:
+    linear-gradient(180deg, rgba(10,9,7,.34) 0%, rgba(10,9,7,.20) 50%, rgba(10,9,7,.40) 100%),
+    url("assets/web/spread.webp") center 26% / cover no-repeat,
+    #12100E}
+.cater .head{background:rgba(9,8,6,.70);backdrop-filter:blur(3px);
+  border:1px solid rgba(255,255,255,.10);border-radius:24px;
+  padding:clamp(26px,3.2vw,44px) clamp(22px,3.4vw,48px);max-width:min(720px,100%)}
+.cater .eyebrow{color:#FFD64A}
+.cater h2{color:#FFFFFF}
+.cater .head p{color:#EDE7DA}
+
+/* ---------- Tamara ---------- */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:clamp(24px,4vw,60px);align-items:center}
+.about img{width:100%;aspect-ratio:1/1;object-fit:cover;
+  border:3px solid var(--ink);border-radius:22px}
+.about h2{font-size:clamp(28px,3.6vw,48px)}
+.about p{margin-top:15px;color:var(--ink-2)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;isolation:isolate;overflow:clip;background:var(--ink);color:#EFE9DB;
+  padding:clamp(44px,5.4vw,72px) 0 28px}
+.foot__bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.foot__bg video{width:100%;height:100%;object-fit:cover;display:block}
+/* Same idea in the footer: the flames run clear, and the columns sit on their own panel. */
+.foot .wrap{position:relative;z-index:1}
+.foot__panel{background:rgba(9,8,6,.72);backdrop-filter:blur(3px);
+  border:1px solid rgba(255,255,255,.10);border-radius:22px;
+  padding:clamp(24px,3vw,40px) clamp(20px,3vw,40px) clamp(18px,2.4vw,26px)}
+.foot__g{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(3,minmax(0,1fr));
+  gap:clamp(22px,3vw,40px);align-items:start}
+.foot__mark img{width:clamp(150px,15vw,190px);height:auto;margin-bottom:14px}
+.foot__mark p{max-width:34ch}
+.foot__h{margin:0 0 11px;font:700 11px/1 Archivo,sans-serif;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--yellow);font-family:Archivo,sans-serif}
+.foot p{color:#D8D1C2;font-size:14.5px}
+.foot a:not(.btn){display:inline-flex;align-items:center;min-height:32px;
+  color:#D8D1C2;font-size:14.5px;text-decoration:none}
+.foot__hrs{margin-top:10px;font-size:13.5px;line-height:1.65;color:#B9B1A1}
+.foot__end{margin-top:clamp(28px,4vw,44px);padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.16);text-align:center;color:#D6CFC0;font-size:13px}
+
+/* ---------- the order bar that follows you on a phone ---------- */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:var(--red-d);border-top:3px solid var(--ink);padding:10px var(--gut);
+  align-items:center;justify-content:space-between;gap:12px}
+.dock b{font:400 17px/1 Anton,sans-serif;text-transform:uppercase;color:#FFFFFF;letter-spacing:.03em}
+.dock span{display:block;font:600 10px/1.3 Archivo,sans-serif;letter-spacing:.13em;
+  text-transform:uppercase;color:#F6D9D5}
+
+/* Hover belongs to a mouse. On a touch screen a tap fires it and the state sticks. */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+  .btn--green:hover{background:#064E20;border-color:#064E20;color:#FFFFFF}
+  .btn--red:hover{background:var(--red-x);border-color:var(--red-x);color:#FFFFFF}
+  .btn--yellow:hover{background:var(--ink);border-color:var(--ink);color:var(--yellow)}
+  .cat[aria-pressed="false"]:hover{border-color:var(--red-d);color:var(--ink)}
+  .seg button[aria-pressed="false"]:hover{background:var(--cream-2);color:var(--ink)}
+  .item:hover{border-color:var(--red-d)}
+  .add:hover{background:var(--red-x)}
+  .qty button:hover{background:var(--red-d);color:#FFFFFF}
+  .tray__x:hover{color:var(--red)}
+  .util a:not(.btn):hover,.foot a:not(.btn):hover{color:var(--yellow)}
+  .nav a:not(.btn):hover{color:var(--green-d)}
+}
+
+@media (max-width:1100px){
+  .order__in{grid-template-columns:minmax(0,1fr)}
+  .tray{position:static}
+}
+@media (max-width:1024px){
+  .nav{display:none}
+  .burger{display:block}
+  .about{grid-template-columns:minmax(0,1fr)}
+  .foot__g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot__mark{grid-column:1 / -1}
+}
+@media (max-width:820px){
+  .m__list{grid-template-columns:minmax(0,1fr)}
+  .kits{grid-template-columns:minmax(0,1fr)}
+  .band__in{grid-template-columns:minmax(0,1fr)}
+  .band__c{border-left:0;border-top:1px solid rgba(255,255,255,.28)}
+  .band__c:first-child{border-top:0}
+  .dock{display:flex}
+  body{padding-bottom:72px}
+}
+@media (max-width:520px){
+  .foot__g{grid-template-columns:minmax(0,1fr)}
+  .util__in{gap:2px 16px;font-size:10px;letter-spacing:.08em}
+}
+/* ============================================================
+   ENTRANCE MOTION
+   One treatment per kind of section, chosen from what the section is. The food wall keeps its
+   own rules above. Everything here is behind .js-anim, so nothing is ever hidden without
+   JavaScript running to put it back.
+   ============================================================ */
+
+/* the generic case, still used by anything without its own treatment */
+.js-anim .reveal:not(.fw__t){opacity:0;transform:translateY(22px);
+  transition:opacity 620ms var(--ease),transform 620ms var(--ease)}
+.js-anim .reveal.is-in:not(.fw__t){opacity:1;transform:none}
+
+/* ---------- section heads: the headline lifts out from under a mask ---------- */
+.js-anim .head.reveal{opacity:1;transform:none}
+.js-anim .head.reveal > *{opacity:0}
+.js-anim .head.reveal .eyebrow{transform:translateX(-34px);
+  transition:opacity 520ms var(--ease),transform 620ms var(--ease)}
+.js-anim .head.reveal h2{transform:translateX(-56px);
+  transition:opacity 620ms var(--ease) 90ms, transform 820ms var(--ease) 90ms}
+.js-anim .head.reveal p{transform:translateX(56px);
+  transition:opacity 620ms var(--ease) 230ms,transform 820ms var(--ease) 230ms}
+.js-anim .head.reveal.is-in > *{opacity:1}
+.js-anim .head.reveal.is-in .eyebrow,
+.js-anim .head.reveal.is-in h2,
+.js-anim .head.reveal.is-in p{transform:none}
+/* the flag rule under the headline wipes open from the middle */
+.js-anim .head.reveal h2::after{transform:scaleX(0);transform-origin:50% 50%;
+  transition:transform 760ms var(--ease) 420ms}
+.js-anim .head.reveal.is-in h2::after{transform:scaleX(1)}
+
+/* ---------- the promise band: mark, then heading, left to right ---------- */
+.js-anim .band__c.reveal{opacity:1;transform:none}
+.js-anim .band__c.reveal svg{opacity:0;transform:translateY(10px) scale(.8);
+  transition:opacity 460ms var(--ease),transform 560ms var(--ease)}
+.js-anim .band__c.reveal b,
+.js-anim .band__c.reveal span{opacity:0;transform:translateY(12px);
+  transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js-anim .band__c.reveal b{transition-delay:120ms}
+.js-anim .band__c.reveal span{transition-delay:200ms}
+.js-anim .band__c.reveal.is-in svg,
+.js-anim .band__c.reveal.is-in b,
+.js-anim .band__c.reveal.is-in span{opacity:1;transform:none}
+.js-anim .band__c.reveal.reveal-d2 svg{transition-delay:110ms}
+.js-anim .band__c.reveal.reveal-d3 svg{transition-delay:220ms}
+.js-anim .band__c.reveal.reveal-d2 b{transition-delay:230ms}
+.js-anim .band__c.reveal.reveal-d3 b{transition-delay:340ms}
+.js-anim .band__c.reveal.reveal-d2 span{transition-delay:310ms}
+.js-anim .band__c.reveal.reveal-d3 span{transition-delay:420ms}
+
+/* ---------- prose columns: the frame opens from the centre, then the words ---------- */
+.js-anim .prose > div.reveal{opacity:0;transform:translateY(20px);
+  transition:opacity 620ms var(--ease),transform 680ms var(--ease)}
+.js-anim .prose > div.reveal figure{clip-path:inset(9% round 16px);
+  transition:clip-path 820ms var(--ease)}
+.js-anim .prose > div.reveal figure img{transform:scale(1.1);filter:blur(5px) saturate(.82);
+  transition:transform 1000ms var(--ease),filter 760ms var(--ease)}
+.js-anim .prose > div.reveal h3,
+.js-anim .prose > div.reveal p{opacity:0;transform:translateY(12px);
+  transition:opacity 520ms var(--ease) 260ms,transform 520ms var(--ease) 260ms}
+.js-anim .prose > div.reveal p{transition-delay:360ms}
+.js-anim .prose > div.reveal.is-in{opacity:1;transform:none}
+.js-anim .prose > div.reveal.is-in figure{clip-path:inset(0% round 16px)}
+.js-anim .prose > div.reveal.is-in figure img{transform:none;filter:none}
+.js-anim .prose > div.reveal.is-in h3,
+.js-anim .prose > div.reveal.is-in p{opacity:1;transform:none}
+
+/* ---------- kitchen cards: the photograph opens, the card lifts under it ---------- */
+.js-anim .kit.reveal{opacity:0;transform:translateY(24px);
+  transition:opacity 640ms var(--ease),transform 700ms var(--ease)}
+.js-anim .kit.reveal img{clip-path:inset(9% round 12px);transform:scale(1.1);
+  filter:blur(5px) saturate(.82);
+  transition:clip-path 860ms var(--ease) 90ms,transform 1020ms var(--ease) 90ms,
+             filter 780ms var(--ease) 90ms}
+.js-anim .kit.reveal .kit__b > *{opacity:0;transform:translateY(12px);
+  transition:opacity 520ms var(--ease) 280ms,transform 520ms var(--ease) 280ms}
+.js-anim .kit.reveal .kit__b p{transition-delay:360ms}
+.js-anim .kit.reveal .kit__b .btn{transition-delay:440ms}
+.js-anim .kit.reveal.is-in{opacity:1;transform:none}
+.js-anim .kit.reveal.is-in img{clip-path:inset(0% round 12px);transform:none;filter:none}
+.js-anim .kit.reveal.is-in .kit__b > *{opacity:1;transform:none}
+
+/* ---------- the FAQ: down the list, in from the left ---------- */
+.js-anim .faq details.reveal{opacity:0;transform:translateX(-18px);
+  transition:opacity 480ms var(--ease),transform 520ms var(--ease)}
+.js-anim .faq details.reveal.is-in{opacity:1;transform:none}
+
+/* ---------- Tamara: the portrait opens, the copy comes in beside it ---------- */
+.js-anim .about img.reveal{opacity:1;transform:none;clip-path:inset(0 100% 0 0);
+  transition:clip-path 900ms var(--ease)}
+.js-anim .about img.reveal.is-in{clip-path:inset(0 0% 0 0)}
+.js-anim .about > div.reveal{opacity:0;transform:translateX(26px);
+  transition:opacity 680ms var(--ease) 180ms,transform 760ms var(--ease) 180ms}
+.js-anim .about > div.reveal.is-in{opacity:1;transform:none}
+
+/* ---------- the order builder: controls settle, the tray rises last ---------- */
+.js-anim .where.reveal,
+.js-anim .cats.reveal{opacity:0;transform:translateY(16px);
+  transition:opacity 520ms var(--ease),transform 520ms var(--ease)}
+.js-anim .cats.reveal{transition-delay:110ms}
+/* the button a section ends on, and the printable menu block */
+.js-anim .sec__cta.reveal,
+.js-anim .getpdf.reveal{opacity:0;transform:translateY(18px) scale(.97);
+  transition:opacity 540ms var(--ease),transform 560ms var(--ease)}
+.js-anim .sec__cta.reveal.is-in,
+.js-anim .getpdf.reveal.is-in{opacity:1;transform:none}
+
+.js-anim .tray.reveal{opacity:0;transform:translateY(34px);
+  transition:opacity 700ms var(--ease) 160ms,transform 760ms var(--ease) 160ms}
+.js-anim .where.reveal.is-in,
+.js-anim .cats.reveal.is-in,
+.js-anim .tray.reveal.is-in{opacity:1;transform:none}
+
+/* On a narrow screen sideways motion has nowhere to travel: it pushed the page 6px wider than
+   the window at 500px. Below the two column width everything arrives vertically instead, which
+   reads better on a phone anyway. */
+@media (max-width:759px){
+  .js-anim .head.reveal .eyebrow{transform:translateY(12px)}
+  .js-anim .head.reveal h2{transform:translateY(18px)}
+  .js-anim .head.reveal p{transform:translateY(14px)}
+  .js-anim .faq details.reveal{transform:translateY(16px)}
+  .js-anim .about > div.reveal{transform:translateY(22px)}
+  .js-anim .about img.reveal{clip-path:inset(0 0 100% 0)}
+  .js-anim .about img.reveal.is-in{clip-path:inset(0 0 0% 0)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .js-anim .reveal,
+  .js-anim .reveal > *,
+  .js-anim .reveal img,
+  .js-anim .reveal figure,
+  .js-anim .reveal h2::after{opacity:1 !important;transform:none !important;
+    clip-path:none !important;animation:none !important}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:1ms !important}
+  .js-anim .reveal{opacity:1 !important;transform:none !important}
+}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="util__in">
+    <span><i></i>Open 11am, Mon to Sat</span>
+    <a href="tel:+13039975623">Centennial (303) 997-5623</a>
+    <a href="tel:+17204102956">Denver (720) 410-2956</a>
+  </div>
+</div>
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="mark" href="#top">
+      <img src="assets/logo/reggae-pot-logo-horizontal.png" alt="Reggae Pot Jamaican Grill" width="797" height="119">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#food">Food</a>
+      <a href="#kitchens">Kitchens</a>
+      <a href="#catering">Catering</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--red btn--sm" href="#menu">Order Online <span class="cnt" id="cnt" hidden>0</span></a>
+    </nav>
+    <button class="burger" type="button" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <video id="herovid" muted loop playsinline preload="none" poster="assets/web/hero-food-poster.webp">
+        <source src="assets/web/hero-food.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__in">
+      <div class="hero__card">
+      <div>
+        <span class="script">Come hungry</span>
+        <h1><span>Jerk, Curry</span><span class="gr">&amp; Oxtail</span>
+          <em>Jamaican Food in Centennial and Denver</em></h1>
+        <p class="hero__sub">Jerk chicken off the grill, oxtail stewed down slow, curry goat and
+          ackee and salt fish, cooked the way it is cooked at home. Order online, walk in later,
+          and collect it without standing in the line.</p>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--red" href="#menu">Order Online</a>
+        <a class="btn btn--yellow" href="#kitchens">Find Your Kitchen</a>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ORDER AHEAD ============ -->
+  <section class="band">
+    <div class="band__in">
+      <div class="band__c">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5z"></path></svg>
+        <b>Skip the Line</b>
+        <span>Your order goes to the kitchen the moment you send it. Walk past the queue.</span>
+      </div>
+      <div class="band__c">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+        <b>No Wait</b>
+        <span>It is cooked to your pickup time, not to the time you arrive.</span>
+      </div>
+      <div class="band__c">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 10-14 0c0 5.3 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+        <b>Two Kitchens</b>
+        <span>Centennial and Denver, each with its own menu and its own pickup counter.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE FOOD WALL ============ -->
+  <section class="sec sec--cream" id="kitchen">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Straight From the Pot</span>
+        <h2>This Is What Is Cooking</h2>
+        <p>Off the grill, out of the pot and into the tray. Every plate below is on the menu
+          today.</p>
+      </div>
+
+      <div class="fw">
+        <figure class="fw__t fw__t--a">
+          <img src="assets/sq/plates.webp" alt="Two blue plates, one of oxtail with rice and peas, one of jerk chicken salad" width="760" height="760" loading="lazy">
+          <figcaption>
+            <b>Oxtail</b>
+            <span class="fw__sub">Stewed down slow until it gives up the bone</span>
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--b">
+          <img src="assets/appetite/glossy.webp" alt="Jerk chicken pieces in sauce on a blue plate" width="1000" height="562" loading="lazy">
+          <figcaption>
+            <b>Jerk BBQ Ribs</b>
+            
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--c">
+          <img src="assets/sq/wings.webp" alt="Glazed jerk chicken wings on a blue plate" width="760" height="760" loading="lazy">
+          <figcaption>
+            <b>Jerk Wings</b>
+            
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--d">
+          <img src="assets/sq/ackee.webp" alt="Ackee and saltfish cooking in a black pan" width="760" height="760" loading="lazy">
+          <figcaption>
+            <b>Ackee and Salt Fish</b>
+            
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--e">
+          <img src="assets/appetite/table.webp" alt="Blue plates of curry chicken, jerk ribs and sides set out on a table" width="1000" height="562" loading="lazy">
+          <figcaption>
+            <b>Curry Chicken</b>
+            
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--f">
+          <img src="assets/frames/f1.webp" alt="Overhead view of blue plates with fried plantain, rice and peas, salad and mango" width="760" height="760" loading="lazy">
+          <figcaption>
+            <b>Ripe Fried Plantains</b>
+            
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--g">
+          <img src="assets/sq/patty.webp" alt="Hands breaking open a golden beef patty" width="760" height="760" loading="lazy">
+          <figcaption>
+            <b>Beef Patty</b>
+            
+          </figcaption>
+        </figure>
+        <figure class="fw__t fw__t--h">
+          <img src="assets/frames/f2.webp" alt="Overhead view of curry chicken, jerk ribs and jerk wings on blue plates" width="760" height="760" loading="lazy">
+          <figcaption>
+            <b>The Whole Table</b>
+            <span class="fw__sub">Catering for offices, churches and family gatherings</span>
+          </figcaption>
+          
+        </figure>
+      </div>
+
+      <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
+        <a class="btn btn--red" href="#menu">Build Your Tray</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ ORDER BUILDER ============ -->
+  <section class="sec sec--paper" id="menu">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Feeling Hungry</span>
+        <h2>Build Your Tray</h2>
+        <p>Tap to add. The total updates as you go, then you hand the tray straight to your
+          kitchen. Every price is the price you pay at the counter.</p>
+      </div>
+
+      <div class="order__in">
+        <div>
+          <div class="where">
+            <span class="where__l" id="wl">Ordering from</span>
+            <div class="seg" role="group" aria-labelledby="wl">
+              <button type="button" data-loc="centennial" aria-pressed="true">Centennial</button>
+              <button type="button" data-loc="denver" aria-pressed="false">Denver</button>
+            </div>
+            <span class="where__s" id="wstat" hidden><i></i><span></span></span>
+          </div>
+
+          <div class="cats" role="group" aria-label="Menu sections" id="cats"></div>
+          <ul class="items" id="items"></ul>
+
+          <div class="getpdf">
+            <a class="btn btn--yellow" href="assets/reggae-pot-menu.pdf" target="_blank" rel="noopener" type="application/pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v12"></path><path d="M7 11l5 5 5-5"></path><path d="M4 20h16"></path>
+              </svg>
+              Download the Menu
+            </a>
+            <p>One page, both kitchens, every price. PDF, 250KB, made to print or to keep on
+              your phone.</p>
+          </div>
+        </div>
+
+        <aside class="tray" id="tray" aria-label="Your tray">
+          <div class="tray__h"><h3>Your Tray</h3><span id="trayWhere">Centennial pickup</span></div>
+          <div class="tray__b">
+            <p class="tray__empty" id="trayEmpty">Nothing on it yet. Tap a dish to start.</p>
+            <ul class="tray__l" id="trayList"></ul>
+          </div>
+          <div class="tray__f">
+            <div class="tray__t"><span>Total</span><b id="total" aria-live="polite">$0.00</b></div>
+            <a class="btn btn--red" id="checkout" href="https://reggaepotjamaicangrill.com/order-centennial">Take it to Checkout</a>
+            <p class="tray__note">Your tray opens the kitchen's own ordering page, where you confirm
+              and pay. Prices shown are that kitchen's menu.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT WE COOK ============ -->
+  <section class="sec sec--cream" id="food">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">The Cooking</span>
+        <h2>Island Specialties, Cooked to Order</h2>
+      </div>
+      <div class="prose">
+        <div>
+          <figure><img src="assets/sq/ribs.webp" alt="A rack of glazed jerk barbecue ribs on a blue plate" width="760" height="760" loading="lazy"></figure>
+          <h3>Off the Grill</h3>
+          <p>Jerk chicken is the plate most people come for. It sits overnight in scotch bonnet
+            and pimento, goes on the grill, then gets sauced as it leaves the kitchen. Jerk pork,
+            jerk shrimp and jerk barbecue ribs come off the same grill, and every one of them is
+            served with two sides.</p>
+          <p>If you want the heat without the bone, the jerk wings and the jerk chicken salad do
+            the same job in a smaller plate.</p>
+        </div>
+        <div>
+          <figure><img src="assets/sq/curry.webp" alt="Curry chicken with carrot and potato on a blue plate" width="760" height="760" loading="lazy"></figure>
+          <h3>Out of the Pot</h3>
+          <p>Oxtail goes on early and stays on until it gives up the bone. Curry goat is cooked
+            long and low, and brown stew chicken is browned down and finished in its own gravy.
+            Curry chicken is simmered with potato and carrot the way it is at home.</p>
+          <p>Ackee and salt fish, the national dish of Jamaica, is on the menu every day, and so
+            is escoveitch red snapper, fried whole and dressed with peppers and vinegar.</p>
+        </div>
+        <div>
+          <figure><img src="assets/sq/plantains.webp" alt="Slices of ripe plantain frying in bubbling oil" width="760" height="760" loading="lazy"></figure>
+          <h3>Vegan, Sides and Juices</h3>
+          <p>There is a set of vegan dishes on the menu alongside the meat, and the sides carry
+            the plate: rice and peas, festival, fried plantain, steamed cabbage and macaroni pie.</p>
+          <p>Fresh homemade juices are made in house. Patties are baked to order and folded to
+            travel, which makes them the easiest thing to add to a pickup order.</p>
+        </div>
+      </div>
+      <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
+        <a class="btn btn--red" href="#menu">See the Full Menu and Order</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ THE TWO KITCHENS ============ -->
+  <section class="sec sec--paper" id="kitchens">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Pick Your Counter</span>
+        <h2>Two Kitchens, One Pot</h2>
+        <p>Reggae Pot runs two kitchens in the south Denver metro, one in Centennial and one in
+          Denver. Each takes its own orders and keeps its own menu, so start by choosing the
+          counter you are collecting from.</p>
+      </div>
+      <div class="kits">
+        <article class="kit">
+          <img src="assets/frames/f3.webp" alt="Jerk chicken salad with lettuce, tomato, cucumber and mango on a blue plate" width="760" height="760" loading="lazy">
+          <div class="kit__b">
+            <h3>Centennial</h3>
+            <p>7562 S University Blvd Unit C, Centennial, CO 80122.<br>Mon to Thu 11am to 8pm, Fri and Sat 11am to 9pm, open Sunday.</p>
+            <a class="btn btn--red" href="https://reggaepotjamaicangrill.com/order-centennial">Order From Centennial</a>
+          </div>
+        </article>
+        <article class="kit">
+          <img src="assets/appetite/pour.webp" alt="Jerk sauce being poured over grilled chicken on a dark plate" width="1280" height="720" loading="lazy">
+          <div class="kit__b">
+            <h3>Denver</h3>
+            <p>2243 S Monaco St Pkwy #104, Denver, CO 80222.<br>Mon to Thu 11am to 8pm, Fri and Sat 11am to 9pm, closed Sunday.</p>
+            <a class="btn btn--red" href="https://reggaepotjamaicangrill.com/order-denver">Order From Denver</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAMARA ============ -->
+  <section class="sec sec--cream" id="about">
+    <div class="wrap">
+      <div class="about">
+        <img src="assets/web/owner-tamara.webp" alt="Tamara, the owner of Reggae Pot Jamaican Grill, seated in the dining room" width="700" height="700">
+        <div>
+          <span class="eyebrow">The Kitchen</span>
+          <h2>Cooked the Way It Is Cooked at Home</h2>
+          <p>Oxtail goes on early and stays on until it gives up the bone. Jerk sits overnight in
+            scotch bonnet and pimento before it ever sees the grill. Nothing is rushed to the
+            counter, which is exactly why ordering ahead is worth it.</p>
+          <p class="sec__cta" style="margin-top:20px"><a class="btn btn--yellow" href="#menu">See What Is On</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATERING ============ -->
+  <section class="sec cater" id="catering">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">For a Crowd</span>
+        <h2>Catering Across the Denver Metro</h2>
+        <p>Trays of jerk chicken, curry goat, rice and peas and festival for offices, churches
+          and family gatherings. Tell us the headcount and the date and we will work the menu
+          around it, including the vegan dishes so nobody at the table is left out.</p>
+        <p class="sec__cta" style="margin-top:22px"><a class="btn btn--red" href="tel:+13039975623">Call to Plan Catering</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec sec--paper" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Before You Order</span>
+        <h2>Questions We Get Asked</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Where is Reggae Pot Jamaican Grill located?</summary>
+          <p>There are two kitchens in the south Denver metro. The Centennial kitchen is at
+            7562 S University Blvd Unit C, Centennial, CO 80122. The Denver kitchen is at
+            2243 S Monaco St Pkwy #104, Denver, CO 80222.</p>
+        </details>
+        <details>
+          <summary>What are your hours?</summary>
+          <p>Both kitchens open at 11am. Monday to Thursday they close at 8pm, and Friday and
+            Saturday they close at 9pm. The Centennial kitchen is open on Sunday and the Denver
+            kitchen is closed on Sunday.</p>
+        </details>
+        <details>
+          <summary>Can I order Jamaican food online for pickup?</summary>
+          <p>Yes. Build your tray on this page, then send it to the kitchen you are collecting
+            from. Your order goes in the moment you confirm it, so it is cooked to your pickup
+            time rather than started when you walk in.</p>
+        </details>
+        <details>
+          <summary>Do the two kitchens have the same menu and prices?</summary>
+          <p>The menus are close but not identical, and two dishes cost slightly more at the
+            Denver kitchen. The prices on this page follow whichever counter you have selected,
+            and the difference is marked on the line.</p>
+        </details>
+        <details>
+          <summary>What is the most popular dish?</summary>
+          <p>Jerk chicken and oxtail are the two plates ordered most. Jerk chicken is marinated
+            overnight in scotch bonnet and pimento then finished on the grill, and oxtail is
+            stewed down until it gives up the bone. Both come with two sides.</p>
+        </details>
+        <details>
+          <summary>Do you have vegan options?</summary>
+          <p>Yes. There is a set of vegan dishes on the menu alongside the meat plates, and the
+            fresh homemade juices are made in house. Vegan items are marked in the menu on this
+            page so you can find them quickly.</p>
+        </details>
+        <details>
+          <summary>Do you cater events in Denver?</summary>
+          <p>Yes. Catering runs across the Denver metro for offices, churches and family
+            gatherings, with trays of jerk chicken, curry goat, rice and peas and festival.
+            Call the Centennial kitchen on (303) 997-5623 to plan it.</p>
+        </details>
+        <details>
+          <summary>What is ackee and salt fish?</summary>
+          <p>It is the national dish of Jamaica: ackee, a soft yellow fruit, cooked down with
+            salted cod, peppers and onion. It is on the Reggae Pot menu every day, and it is one
+            of the traditional dishes the kitchen is known for.</p>
+        </details>
+      </div>
+      <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
+        <a class="btn btn--red" href="#menu">Build Your Tray</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<div class="stripe" aria-hidden="true"><i></i><i></i><i></i></div>
+<footer class="foot">
+  <div class="foot__bg" aria-hidden="true">
+    <video id="footvid" muted loop playsinline preload="none" poster="assets/web/flames-poster.webp">
+      <source src="assets/web/flames.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="wrap">
+    <div class="foot__panel">
+    <div class="foot__g">
+      <div class="foot__mark">
+        <img src="assets/logo/reggae-pot-logo-horizontal.png" alt="Reggae Pot Jamaican Grill" width="797" height="119" loading="lazy">
+        <p>Jerk, curry and oxtail out of two kitchens in the south Denver metro. Order ahead and
+          collect it without standing in the line.</p>
+      </div>
+      <div>
+        <h3 class="foot__h">Centennial</h3>
+        <p>7562 S University Blvd Unit C<br>Centennial, CO 80122</p>
+        <p style="margin-top:6px"><a href="tel:+13039975623">(303) 997-5623</a></p>
+        <p class="foot__hrs">Mon to Thu 11am to 8pm<br>Fri and Sat 11am to 9pm<br>Open Sunday</p>
+      </div>
+      <div>
+        <h3 class="foot__h">Denver</h3>
+        <p>2243 S Monaco St Pkwy #104<br>Denver, CO 80222</p>
+        <p style="margin-top:6px"><a href="tel:+17204102956">(720) 410-2956</a></p>
+        <p class="foot__hrs">Mon to Thu 11am to 8pm<br>Fri and Sat 11am to 9pm<br>Closed Sunday</p>
+      </div>
+      <div>
+        <h3 class="foot__h">Order</h3>
+        <ul>
+          <li><a href="#menu">The Menu</a></li>
+          <li><a href="https://reggaepotjamaicangrill.com/order-centennial">Order From Centennial</a></li>
+          <li><a href="https://reggaepotjamaicangrill.com/order-denver">Order From Denver</a></li>
+          <li><a href="#catering">Catering</a></li>
+          <li><a href="#faq">Questions</a></li>
+          <li><a href="assets/reggae-pot-menu.pdf" target="_blank" rel="noopener" type="application/pdf">Download the Menu (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot__end">Reggae Pot Jamaican Grill. Authentic Jamaican grill, Centennial and Denver, Colorado.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="dock">
+  <div><b id="mtotal">$0.00</b><span>Your tray</span></div>
+  <a class="btn btn--yellow btn--sm" href="#menu">Order Online</a>
+</div>
+
+<script>
+(function(){
+  /* ---------- the menu ----------
+     Prices read straight off the client's own ordering storefront. Where the two
+     kitchens differ, both numbers are held and the card follows the chosen kitchen. */
+  var MENU=[
+   {c:'Meals',   n:'Oxtail',                 p:25.00, ph:'oxtail',       d:'Stewed down slow until it gives up the bone. Served with two sides.'},
+   {c:'Meals',   n:'Curry Goat',             p:23.00,                    d:'Bone-in goat, curried long and low. Two sides.'},
+   {c:'Meals',   n:'Curry Goat Roti',        p:24.00,                    d:'The same curry goat, wrapped to travel.'},
+   {c:'Meals',   n:'Jerk Chicken',           p:21.00, ph:'jerkchicken', heat:1, d:'Marinated overnight in scotch bonnet and pimento, then sauced.'},
+   {c:'Meals',   n:'Jerk Pork',              p:18.99, heat:1,            d:'Jerk-rubbed pork off the grill. Two sides.'},
+   {c:'Meals',   n:'Jerk Shrimp',            p:20.00, heat:1,            d:'Shrimp off the grill with jerk seasoning.'},
+   {c:'Meals',   n:'Jerk BBQ Ribs',          p:22.50, ph:'ribs', heat:1, d:'Jerk-rubbed and finished until the glaze catches.'},
+   {c:'Meals',   n:'Curry Chicken',          p:18.99, ph:'currychicken', d:'Simmered with potato and carrot.'},
+   {c:'Meals',   n:'Curry Chicken Roti',     p:19.99, pDenver:18.00,     d:'Curry chicken wrapped in a roti.'},
+   {c:'Meals',   n:'Brown Stew Chicken',     p:18.99,                    d:'Browned down and stewed with the gravy.'},
+   {c:'Meals',   n:'Ackee & Salt Fish',      p:24.00, ph:'ackee',        d:"Jamaica's national dish, with peppers and onion."},
+   {c:'Meals',   n:'Escoveitch Red Snapper', p:39.99, pDenver:34.99,     d:'Whole fish with peppers and vinegar.'},
+   {c:'Meals',   n:'Curry Potatoes & Veggies',p:16.00, veg:1,            d:'Curried potato and vegetables. Two sides.'},
+
+   {c:'Starters',n:'Jerk Wings Starter',     p:8.99,  ph:'wings', heat:1,d:'Marinated overnight, grilled to order.'},
+   {c:'Starters',n:'Fried Jerk Wings',       p:8.99,  heat:1,            d:'The same wings, fried instead of grilled.'},
+   {c:'Starters',n:'Ackee & Salt Fish Cups', p:14.99,                    d:'Ackee and saltfish in pastry cups.'},
+   {c:'Starters',n:'Vegan Ackee Cups',       p:13.99, veg:1,             d:'The same cups, without the saltfish.'},
+   {c:'Starters',n:"Leighton's Special",     p:15.00,                    d:'The house starter.'},
+
+   {c:'Rasta Pasta',n:'With Jerk Chicken',   p:23.99, heat:1,            d:'Creamy pasta with peppers and jerk chicken.'},
+   {c:'Rasta Pasta',n:'With Shrimp',         p:24.50,                    d:'Creamy pasta with peppers and shrimp.'},
+   {c:'Rasta Pasta',n:'With Oxtail',         p:26.99,                    d:'Creamy pasta with peppers and oxtail.'},
+
+   {c:'Lunch',   n:'Lunch Jerk Chicken',     p:15.00, heat:1,            d:'The lunch portion, off the grill.'},
+   {c:'Lunch',   n:'Lunch Curry Chicken',    p:12.99,                    d:'The lunch portion, curried.'},
+   {c:'Lunch',   n:'Lunch Brown Stew',       p:12.99,                    d:'The lunch portion, browned down.'},
+   {c:'Lunch',   n:'Jerk Chicken Salad',     p:14.00, ph:'salad',        d:'Jerk chicken over leaves, tomato and cucumber.'},
+   {c:'Lunch',   n:'Jerk Shrimp Salad',      p:15.00,                    d:'Jerk shrimp over leaves, tomato and cucumber.'},
+   {c:'Lunch',   n:'Oxtail Cheese Steak',    p:18.00,                    d:'Oxtail, peppers and cheese in a roll.'},
+   {c:'Lunch',   n:'Jerk Chicken Cheese Steak',p:16.00, heat:1,          d:'Jerk chicken, peppers and cheese in a roll.'},
+
+   {c:'Patties', n:'Beef Patty',             p:4.25,  ph:'patty',        d:'Golden pastry, seasoned beef.'},
+   {c:'Patties', n:'Curry Chicken Patty',    p:4.50,                     d:'Golden pastry, curried chicken.'},
+   {c:'Patties', n:'Jerk Chicken Patty',     p:4.50,  heat:1,            d:'Golden pastry, jerk chicken.'},
+   {c:'Patties', n:'Veggie Patty',           p:4.00,  veg:1,             d:'Golden pastry, vegetables.'},
+   {c:'Patties', n:'Cheesy Beef Patty',      p:4.99,                     d:'Beef patty with cheese through it.'},
+   {c:'Patties', n:'Coco Bread',             p:3.00,                     d:'Soft coco bread. Put the patty inside it.'},
+
+   {c:'Sides',   n:'Rice & Peas',            p:4.99,  veg:1,             d:'Cooked in coconut milk.'},
+   {c:'Sides',   n:'Ripe Fried Plantains',   p:6.99,  ph:'plantain', veg:1,d:'Sweet, fried till the edges go dark.'},
+   {c:'Sides',   n:'Steamed Cabbage',        p:5.50,  veg:1,             d:'Steamed with carrot and pepper.'},
+   {c:'Sides',   n:'Baked Mac N Cheese',     p:6.00,                     d:'Baked until the top sets.'},
+   {c:'Sides',   n:'Fried Festival',         p:4.50,                     d:'Sweet fried dumpling.'},
+   {c:'Sides',   n:'Fried Dumpling',         p:4.50,                     d:'Plain fried dumpling.'},
+   {c:'Sides',   n:'Collar Green',           p:6.99,                     d:'Slow-cooked greens.'},
+   {c:'Sides',   n:'Potato Salad',           p:5.50,                     d:'House potato salad.'},
+   {c:'Sides',   n:'Mac Salad',              p:5.50,                     d:'House macaroni salad.'},
+   {c:'Sides',   n:'Veggie Salad',           p:4.00,  veg:1,             d:'Leaves, tomato and cucumber.'},
+   {c:'Sides',   n:'French Fries',           p:3.50,  veg:1,             d:'Straight-cut fries.'},
+   {c:'Sides',   n:'White Rice',             p:4.25,  veg:1,             d:'Plain steamed rice.'},
+   {c:'Sides',   n:'Corn Bread',             p:4.50,                     d:'House corn bread.'},
+   {c:'Sides',   n:'Roti',                   p:6.00,                     d:'Soft roti on its own.'},
+
+   {c:'Drinks',  n:'Tropical Rhythm',        p:4.50,                     d:'Jamaican fruit drink.'},
+   {c:'Drinks',  n:'Ting',                   p:4.25,                     d:'Grapefruit soda.'},
+   {c:'Drinks',  n:'Ginger Beer',            p:4.25,                     d:'Proper ginger heat.'},
+   {c:'Drinks',  n:'Kola Champagne',         p:4.00,                     d:'Jamaican soda.'},
+   {c:'Drinks',  n:'Cream Soda',             p:4.00,                     d:'Jamaican soda.'},
+   {c:'Drinks',  n:'Pineapple Soda',         p:4.00,                     d:'Jamaican soda.'},
+   {c:'Drinks',  n:'Vita Malt',              p:4.00,                     d:'Malt drink.'},
+   {c:'Drinks',  n:'Supligen',               p:4.50,                     d:'Malt nutrition drink.'},
+   {c:'Drinks',  n:'Peanut Irish Moss',      p:4.50,                     d:'Thick, sweet and cold.'},
+   {c:'Drinks',  n:'Canned Soda',            p:2.00,                     d:'Coke, Pepsi or Sprite.'},
+   {c:'Drinks',  n:'Bottled Water',          p:1.50,                     d:'Still water.'},
+
+   {c:'Sweets',  n:'Sweet Potato Pudding',   p:4.50,                     d:'Dense, dark and spiced.'},
+   {c:'Sweets',  n:'Rum Fruitcake',          p:6.00,                     d:'Rich fruitcake with rum.'},
+   {c:'Sweets',  n:'Sorrel Fruitcake',       p:6.00,                     d:'Fruitcake with sorrel.'},
+   {c:'Sweets',  n:'Coconut Drops',          p:5.00,                     d:'Chewy coconut and ginger.'},
+   {c:'Sweets',  n:'Coconut White Cake',     p:4.00,                     d:'Light coconut cake.'},
+   {c:'Sweets',  n:'Pineapple Upside-Down Cake',p:4.00,                  d:'Baked with the fruit on top.'},
+
+   {c:'Kids',    n:'Chicken Strips',         p:6.99,                     d:'For the small ones.'},
+   {c:'Kids',    n:'Chicken Drumstick',      p:6.99,                     d:'For the small ones.'}
+  ];
+
+  var PLACES={
+    centennial:{name:'Centennial',url:'https://reggaepotjamaicangrill.com/order-centennial'},
+    denver:{name:'Denver',url:'https://monaco.reggaepotjamaicangrill.com/'}
+  };
+  var HOURS={
+    centennial:{0:[11,19],1:[11,20],2:[11,20],3:[11,20],4:[11,20],5:[11,21],6:[11,21]},
+    denver:{1:[11,20],2:[11,20],3:[11,20],4:[11,20],5:[11,21],6:[11,21]}
+  };
+  var DAY=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var KEY='rp-tray';
+  var state={loc:'centennial',cat:'Meals',tray:{}};
+  try{
+    var raw=window.localStorage.getItem(KEY);
+    if(raw){
+      var got=JSON.parse(raw);
+      if(got){
+        if(PLACES[got.loc]){state.loc=got.loc;}
+        if(got.tray){state.tray=got.tray;}
+      }
+    }
+  }catch(e){}
+  function save(){try{window.localStorage.setItem(KEY,JSON.stringify({loc:state.loc,tray:state.tray}));}catch(e){}}
+  function price(it){
+    if(state.loc==='denver'){if(it.pDenver){return it.pDenver;}}
+    return it.p;
+  }
+  function money(n){return '$'+n.toFixed(2);}
+
+  /* ---------- open or closed, in the restaurant's own timezone ---------- */
+  function label(h){var s='am',v=h;if(h>=12){s='pm';}if(h>12){v=h-12;}if(h===0){v=12;}return v+s;}
+  function denverNow(){
+    var f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Denver',weekday:'short',hour:'numeric',minute:'numeric',hour12:false});
+    var parts=f.formatToParts(new Date()),o={};
+    for(var i=0;i<parts.length;i++){o[parts[i].type]=parts[i].value;}
+    var m={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var h=parseInt(o.hour,10);if(h===24){h=0;}
+    return {day:m[o.weekday],mins:h*60+parseInt(o.minute,10)};
+  }
+  function statusFor(key){
+    var t=denverNow();
+    if(t.day===undefined){return null;}
+    var today=HOURS[key][t.day];
+    if(today){
+      if(t.mins>=today[0]*60){if(t.mins<today[1]*60){return {open:true,text:'Open until '+label(today[1])};}}
+      else{return {open:false,text:'Opens '+label(today[0])+' today'};}
+    }
+    for(var i=1;i<=7;i++){
+      var d=(t.day+i)%7,nx=HOURS[key][d];
+      if(nx){var w=DAY[d];if(i===1){w='tomorrow';}return {open:false,text:'Opens '+label(nx[0])+' '+w};}
+    }
+    return null;
+  }
+
+  /* ---------- render ---------- */
+  var catsEl=document.getElementById('cats'),itemsEl=document.getElementById('items');
+  var trayList=document.getElementById('trayList'),trayEmpty=document.getElementById('trayEmpty');
+  var totalEl=document.getElementById('total'),mtotalEl=document.getElementById('mtotal');
+  var cntEl=document.getElementById('cnt'),checkout=document.getElementById('checkout');
+  var trayWhere=document.getElementById('trayWhere'),wstat=document.getElementById('wstat');
+  var cats=[];
+  for(var i=0;i<MENU.length;i++){if(cats.indexOf(MENU[i].c)<0){cats.push(MENU[i].c);}}
+
+  function drawCats(){
+    catsEl.innerHTML='';
+    for(var i=0;i<cats.length;i++){
+      var b=document.createElement('button');
+      b.type='button';b.className='cat';b.textContent=cats[i];
+      b.setAttribute('aria-pressed',cats[i]===state.cat?'true':'false');
+      b.setAttribute('data-c',cats[i]);
+      b.addEventListener('click',function(){state.cat=this.getAttribute('data-c');drawCats();drawItems();});
+      catsEl.appendChild(b);
+    }
+  }
+  function idOf(it){return it.c+'|'+it.n;}
+  function drawItems(){
+    itemsEl.innerHTML='';
+    for(var i=0;i<MENU.length;i++){
+      var it=MENU[i];
+      if(it.c!==state.cat){continue;}
+      var id=idOf(it),qty=state.tray[id]?state.tray[id].q:0;
+      var li=document.createElement('li');
+      li.className='item'+(qty>0?' is-in':'');
+      li.innerHTML=
+        '<div class="item__b"><h3>'+it.n+'</h3><p class="desc">'+it.d+'</p>'+
+        (it.veg?'<span class="veg">Vegan</span>':'')+
+        '<div class="item__r"><span class="item__p">'+money(price(it))+'</span><span class="act"></span></div></div>';
+      var act=li.querySelector('.act');
+      if(qty>0){
+        var q=document.createElement('span');q.className='qty';
+        q.innerHTML='<button type="button" aria-label="One less '+it.n+'">&minus;</button><span>'+qty+'</span><button type="button" aria-label="One more '+it.n+'">+</button>';
+        (function(id2){
+          q.children[0].addEventListener('click',function(){bump(id2,-1);});
+          q.children[2].addEventListener('click',function(){bump(id2,1);});
+        })(id);
+        act.appendChild(q);
+      }else{
+        var a=document.createElement('button');
+        a.type='button';a.className='add';a.textContent='Add';
+        a.setAttribute('aria-label','Add '+it.n+' to your tray');
+        (function(it2){a.addEventListener('click',function(){add(it2);});})(it);
+        act.appendChild(a);
+      }
+      itemsEl.appendChild(li);
+    }
+  }
+  function add(it){
+    var id=idOf(it);
+    if(state.tray[id]){state.tray[id].q++;}
+    else{state.tray[id]={n:it.n,c:it.c,q:1};}
+    save();drawItems();drawTray();
+  }
+  function bump(id,by){
+    if(!state.tray[id]){return;}
+    state.tray[id].q=state.tray[id].q+by;
+    if(state.tray[id].q<1){delete state.tray[id];}
+    save();drawItems();drawTray();
+  }
+  function lookup(id){
+    for(var i=0;i<MENU.length;i++){if(idOf(MENU[i])===id){return MENU[i];}}
+    return null;
+  }
+  function drawTray(){
+    trayList.innerHTML='';
+    var total=0,count=0,any=false;
+    for(var id in state.tray){
+      if(!Object.prototype.hasOwnProperty.call(state.tray,id)){continue;}
+      var it=lookup(id);
+      if(!it){continue;}
+      any=true;
+      var row=state.tray[id],line=price(it)*row.q;
+      total+=line;count+=row.q;
+      var li=document.createElement('li');
+      li.innerHTML='<span class="tray__n"><b>'+row.q+' &times; '+it.n+'</b><small>'+it.c+' &middot; '+money(line)+'</small></span>';
+      var x=document.createElement('button');
+      x.type='button';x.className='tray__x';x.innerHTML='&times;';
+      x.setAttribute('aria-label','Remove '+it.n+' from your tray');
+      (function(id2){x.addEventListener('click',function(){delete state.tray[id2];save();drawItems();drawTray();});})(id);
+      li.appendChild(x);
+      trayList.appendChild(li);
+    }
+    trayEmpty.hidden=any;
+    totalEl.textContent=money(total);
+    mtotalEl.textContent=money(total);
+    cntEl.textContent=String(count);
+    cntEl.hidden=count===0;
+    checkout.setAttribute('href',PLACES[state.loc].url);
+    checkout.textContent=count===0?'Take it to Checkout':'Take '+count+' item'+(count===1?'':'s')+' to Checkout';
+    trayWhere.textContent=PLACES[state.loc].name+' pickup';
+  }
+  function drawStatus(){
+    var st=statusFor(state.loc);
+    if(!st){wstat.setAttribute('hidden','');return;}
+    wstat.querySelector('span').textContent=st.text;
+    wstat.style.color=st.open?'#0A6B2D':'#A32A1C';
+    wstat.style.borderColor=st.open?'rgba(10,107,45,.55)':'rgba(163,42,28,.55)';
+    wstat.querySelector('i').style.background=st.open?'#0A6B2D':'#A32A1C';
+    wstat.removeAttribute('hidden');
+  }
+  var segBtns=[].slice.call(document.querySelectorAll('.seg button'));
+  for(var s=0;s<segBtns.length;s++){
+    segBtns[s].addEventListener('click',function(){
+      state.loc=this.getAttribute('data-loc');
+      for(var j=0;j<segBtns.length;j++){segBtns[j].setAttribute('aria-pressed',segBtns[j]===this?'true':'false');}
+      save();drawItems();drawTray();drawStatus();
+    });
+  }
+  for(var s2=0;s2<segBtns.length;s2++){
+    segBtns[s2].setAttribute('aria-pressed',segBtns[s2].getAttribute('data-loc')===state.loc?'true':'false');
+  }
+  try{drawStatus();}catch(e){}
+  drawCats();drawItems();drawTray();
+
+  /* ---------- measure the thing the pilot is paid on ---------- */
+  function track(n,p){if(typeof window.gtag==='function'){try{window.gtag('event',n,p);}catch(e){}}}
+  checkout.addEventListener('click',function(){
+    var c=0;
+    for(var id in state.tray){if(Object.prototype.hasOwnProperty.call(state.tray,id)){c+=state.tray[id].q;}}
+    track('order_click',{location:state.loc,items:c,value:totalEl.textContent});
+  });
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a'):null;
+    if(!a){return;}
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('catering.reggaepotjamaicangrill')>-1){track('catering_click',{link_url:h});return;}
+    if(h.indexOf('reggae-pot-menu.pdf')>-1){track('menu_download',{link_url:h});return;}
+    if(h.indexOf('tel:')===0){track('call_click',{link_url:h});return;}
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Reggae Pot Jamaican Grill","servesCuisine":"Jamaican","url":"https://reggaepotjamaicangrill.com/","telephone":"+1-303-997-5623","address":{"@type":"PostalAddress","streetAddress":"7562 S University Blvd Unit C","addressLocality":"Centennial","addressRegion":"CO","postalCode":"80122","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"11:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"21:00"}],"hasMenu":"https://reggaepotjamaicangrill.com/our-menu/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Reggae Pot Jamaican Grill","servesCuisine":"Jamaican","url":"https://reggaepotjamaicangrill.com/","telephone":"+1-720-410-2956","address":{"@type":"PostalAddress","streetAddress":"2243 S Monaco St Pkwy #104","addressLocality":"Denver","addressRegion":"CO","postalCode":"80222","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"11:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"21:00"}],"hasMenu":"https://reggaepotjamaicangrill.com/our-menu/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Reggae Pot Jamaican Grill","url":"https://reggaepotjamaicangrill.com/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Where is Reggae Pot Jamaican Grill located?","acceptedAnswer":{"@type":"Answer","text":"There are two kitchens in the south Denver metro. The Centennial kitchen is at 7562 S University Blvd Unit C, Centennial, CO 80122. The Denver kitchen is at 2243 S Monaco St Pkwy #104, Denver, CO 80222."}},
+{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Both kitchens open at 11am. Monday to Thursday they close at 8pm, and Friday and Saturday they close at 9pm. The Centennial kitchen is open on Sunday and the Denver kitchen is closed on Sunday."}},
+{"@type":"Question","name":"Can I order Jamaican food online for pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes. Build your tray on the homepage, then send it to the kitchen you are collecting from. Your order goes in the moment you confirm it, so it is cooked to your pickup time rather than started when you walk in."}},
+{"@type":"Question","name":"Do the two kitchens have the same menu and prices?","acceptedAnswer":{"@type":"Answer","text":"The menus are close but not identical, and two dishes cost slightly more at the Denver kitchen. Prices follow whichever counter you have selected and the difference is marked on the line."}},
+{"@type":"Question","name":"What is the most popular dish?","acceptedAnswer":{"@type":"Answer","text":"Jerk chicken and oxtail are the two plates ordered most. Jerk chicken is marinated overnight in scotch bonnet and pimento then finished on the grill, and oxtail is stewed down until it gives up the bone. Both come with two sides."}},
+{"@type":"Question","name":"Do you have vegan options?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is a set of vegan dishes on the menu alongside the meat plates, and the fresh homemade juices are made in house. Vegan items are marked in the menu."}},
+{"@type":"Question","name":"Do you cater events in Denver?","acceptedAnswer":{"@type":"Answer","text":"Yes. Catering runs across the Denver metro for offices, churches and family gatherings, with trays of jerk chicken, curry goat, rice and peas and festival. Call the Centennial kitchen on (303) 997-5623 to plan it."}},
+{"@type":"Question","name":"What is ackee and salt fish?","acceptedAnswer":{"@type":"Answer","text":"It is the national dish of Jamaica: ackee, a soft yellow fruit, cooked down with salted cod, peppers and onion. It is on the Reggae Pot menu every day."}}
+]}
+</script>
+
+<script>
+(function(){
+  /* Two purely decorative clips: the flames behind the banner and the kitchen loop in the
+     gallery. Neither costs a byte until it is on screen, neither plays for a reader who has
+     asked the system for reduced motion, and the banner drops to a lighter file on a narrow
+     screen. */
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var thrifty=false;
+  if(navigator.connection){
+    if(navigator.connection.saveData===true){thrifty=true;}
+    if(/2g/.test(navigator.connection.effectiveType||'')){thrifty=true;}
+  }
+  function wake(v,src){
+    if(v.getAttribute('data-loaded')===null){
+      v.setAttribute('data-loaded','1');
+      if(src){v.querySelector('source').setAttribute('src',src);}
+      v.preload='auto';
+      v.addEventListener('canplay',function(){var p=v.play();if(p){if(p.catch){p.catch(function(){});}}},{once:true});
+      v.load();
+    }else{
+      var p2=v.play();if(p2){if(p2.catch){p2.catch(function(){});}}
+    }
+  }
+  function watch(v,src){
+    if(!v){return;}
+    if(reduced){return;}
+    if(thrifty){return;}
+    if(!('IntersectionObserver' in window)){return;}
+    var io=new IntersectionObserver(function(en){
+      for(var i=0;i<en.length;i++){
+        if(en[i].isIntersecting){wake(v,src);}else{v.pause();}
+      }
+    },{threshold:0.2});
+    io.observe(v);
+  }
+  var light=window.innerWidth<820?'assets/web/hero-food-sm.mp4':null;
+  watch(document.getElementById('herovid'),light);
+  watch(document.getElementById('footvid'),window.innerWidth<820?'assets/web/flames-sm.mp4':null);
+})();
+</script>
+
+<script>
+(function(){
+  /* Nothing is hidden until we know we can put it back. */
+  if(!('IntersectionObserver' in window)){return;}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+
+  var groups=[
+    ['.sec:not(#menu) > .wrap > .head',0],
+    ['.band__c',1],
+    ['.fw__t',1],
+    ['.prose > div',1],
+    ['.kit',1],
+    ['.where',0],['.cats',0],['.tray',0],
+    ['.faq details',1],
+    ['.sec__cta',0],['.getpdf',0],
+    ['.about img',0],['.about > div',0],
+    ['.foot__g > div',1]
+  ];
+  var all=[];
+  for(var g=0;g<groups.length;g++){
+    var nodes=[].slice.call(document.querySelectorAll(groups[g][0]));
+    for(var i=0;i<nodes.length;i++){
+      nodes[i].classList.add('reveal');
+      if(groups[g][1]===1){nodes[i].classList.add('reveal-d'+((i%4)+1));}
+      all.push(nodes[i]);
+    }
+  }
+  if(all.length===0){return;}
+  document.documentElement.classList.add('js-anim');
+
+  var waiting=all.slice();
+  function show(el){
+    el.classList.add('is-in');
+    var at=waiting.indexOf(el);
+    if(at>-1){waiting.splice(at,1);}
+  }
+  function showAll(){while(waiting.length){show(waiting[0]);}}
+
+  /* The scroll trigger. The element has to be a little way into the viewport before it plays,
+     so it moves as you arrive at it rather than just before. */
+  var io=new IntersectionObserver(function(en,obs){
+    for(var i=0;i<en.length;i++){
+      if(en[i].isIntersecting){show(en[i].target);obs.unobserve(en[i].target);}
+    }
+  },{rootMargin:'0px 0px -12% 0px',threshold:0.08});
+  for(var k=0;k<all.length;k++){io.observe(all[k]);}
+
+  /* The failsafe rescues only what a reader can actually SEE. Anything still off screen keeps
+     waiting for the scroll, which is the whole point; anything on screen is shown within about
+     a second even if the observer never fires. */
+  var sweep=window.setInterval(function(){
+    if(waiting.length===0){window.clearInterval(sweep);return;}
+    var h=window.innerHeight||document.documentElement.clientHeight;
+    for(var i=waiting.length-1;i>=0;i--){
+      var r=waiting[i].getBoundingClientRect();
+      if(r.bottom>0){if(r.top<h){show(waiting[i]);}}
+    }
+  },1200);
+
+  /* Leaving the page, or printing it, must never capture a half revealed page. */
+  window.addEventListener('pagehide',showAll);
+  window.addEventListener('beforeprint',showAll);
+
+  /* The menu cards are built by script, so their animation is triggered by the section coming
+     into view rather than by the card being created. Cards made later by a category switch
+     still animate, because the trigger sits on the section. */
+  var menu=document.getElementById('menu');
+  if(menu){
+    var mio=new IntersectionObserver(function(en,obs){
+      for(var i=0;i<en.length;i++){
+        if(en[i].isIntersecting){menu.classList.add('is-live');obs.disconnect();}
+      }
+    },{rootMargin:'0px 0px -10% 0px',threshold:0.04});
+    mio.observe(menu);
+  }
+})();
+</script>
+
+
+</body>
+</html>

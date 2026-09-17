@@ -1,0 +1,4 @@
+_shots/
+*.tmp
+Thumbs.db
+.DS_Store

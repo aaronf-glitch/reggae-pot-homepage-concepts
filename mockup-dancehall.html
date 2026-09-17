@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reggae Pot Jamaican Grill | Order Jerk, Curry and Oxtail in Centennial and Denver</title>
+<meta name="description" content="Order Jamaican food online from Reggae Pot Jamaican Grill. Jerk chicken, curry goat and oxtail from our Centennial and Denver kitchens. Order ahead and skip the line.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   REGGAE POT, "DANCEHALL"
+   A 1970s Jamaican dancehall poster, built as a website.
+   Black is the structure, not the background. Saturated panels of the logo's own green,
+   yellow and flame red alternate down the page, each one a hand-painted signboard with a
+   photograph beside it. Red is reserved for one thing only: ordering.
+   Every colour below was sampled out of assets/logo/reggae-pot-logo-full.png.
+   ============================================================ */
+:root{
+  --ink:#0E0D0B;--ink-2:#1A1815;--ink-3:#2A2621;
+  --bone:#F6F1E4;--bone-2:#DDD5C2;--bone-3:#A79E8A;
+  --green:#00903C;      /* logo green: panels and large type */
+  --green-d:#0A6B2D;    /* darkened until small white text clears 4.5:1 */
+  --yellow:#FCF000;     /* logo yellow: a panel fill, always under black text */
+  --red:#C8321F;        /* the flame, and the ordering action */
+  --red-d:#A42413;
+  --wrap:1280px;--gut:clamp(18px,4vw,44px);
+  --ease:cubic-bezier(.2,.7,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--bone);
+  font:400 16.5px/1.65 Karla,system-ui,"Segoe UI",Roboto,sans-serif;overflow-x:clip;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:"Alfa Slab One",Georgia,serif;font-weight:400;line-height:1.02;
+  letter-spacing:-.005em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
+.lab{display:inline-block;font:600 11.5px/1 "Barlow Condensed",sans-serif;letter-spacing:.26em;
+  text-transform:uppercase}
+
+/* ---------- the signboard plate: this build's signature ----------
+   A hand-painted plate, tilted a degree off true, with a hard offset shadow instead of a
+   soft one. It marks every section the way a jerk shack marks its menu. */
+.plate{display:inline-block;align-self:flex-start;background:var(--bone);color:var(--ink);
+  border:3px solid var(--ink);padding:9px 18px;transform:rotate(-1.2deg);
+  box-shadow:5px 5px 0 var(--ink);
+  font:600 12px/1 "Barlow Condensed",sans-serif;letter-spacing:.24em;text-transform:uppercase}
+.plate--y{background:var(--yellow)}
+.plate--g{background:var(--green-d);color:#fff;border-color:var(--ink)}
+.plate--r{background:var(--red);color:#fff}
+
+/* ---------- buttons: poster blocks, not pills ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:0 30px;text-decoration:none;cursor:pointer;border-radius:2px;
+  font:700 13px/1 "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;
+  border:3px solid var(--ink);background:var(--bone);color:var(--ink);
+  box-shadow:5px 5px 0 var(--ink);
+  transition:transform 140ms var(--ease),box-shadow 140ms var(--ease),
+             background-color 160ms ease,color 160ms ease}
+.btn--order{background:var(--red);color:#fff;border-color:var(--ink)}
+.btn--y{background:var(--yellow);color:var(--ink)}
+.btn--ghost{background:transparent;color:var(--bone);border-color:var(--bone);box-shadow:5px 5px 0 rgba(246,241,228,.28)}
+.btn--sm{min-height:46px;padding:0 20px;font-size:12px;box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+
+/* ---------- the strip above the header ---------- */
+.util{background:var(--ink);border-bottom:2px solid var(--ink-3)}
+.util__in{max-width:var(--wrap);margin:0 auto;padding:7px var(--gut);
+  display:flex;flex-wrap:wrap;gap:2px 26px;align-items:center;justify-content:center;
+  font:600 12px/1.5 "Barlow Condensed",sans-serif;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--bone-2)}
+.util a:not(.btn){display:inline-flex;align-items:center;min-height:32px;
+  text-decoration:none;color:var(--bone-2)}
+.util i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--yellow);
+  margin-right:9px}
+
+/* ---------- header ---------- */
+.hdr{position:sticky;top:0;z-index:60;background:var(--bone);border-bottom:4px solid var(--ink)}
+.hdr__in{max-width:var(--wrap);margin:0 auto;padding:11px var(--gut);
+  display:flex;align-items:center;justify-content:space-between;gap:20px}
+.mark{display:flex;align-items:center;min-height:46px;text-decoration:none;flex:0 0 auto}
+.mark img{width:clamp(170px,19vw,226px);height:auto}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a:not(.btn){font:600 13px/1 "Barlow Condensed",sans-serif;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--ink);text-decoration:none;
+  display:inline-flex;align-items:center;min-height:36px;border-bottom:2px solid transparent;
+  transition:border-color 160ms ease}
+.burger{display:none;width:48px;height:48px;background:var(--yellow);border:3px solid var(--ink);
+  border-radius:2px;cursor:pointer;padding:0;box-shadow:4px 4px 0 var(--ink)}
+.burger span{display:block;width:20px;height:2.5px;background:var(--ink);margin:4px auto}
+
+/* ---------- hero: the poster ---------- */
+.hero{position:relative;background:var(--ink);padding:clamp(36px,5vw,72px) 0 clamp(30px,4vw,54px);
+  overflow:clip}
+/* faint zinc-fence ribbing behind the poster, the way a yard fence sits behind a sign */
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(90deg,
+    rgba(246,241,228,.045) 0 2px, rgba(0,0,0,0) 2px 9px, rgba(0,0,0,.20) 9px 11px, rgba(0,0,0,0) 11px 18px)}
+.hero__in{position:relative;z-index:1;max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut);
+  display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);
+  gap:clamp(26px,3.6vw,56px);align-items:center}
+.hero h1{margin-top:16px;font-size:clamp(42px,6.2vw,86px);color:var(--bone)}
+.hero h1 .y{color:var(--yellow)}
+.hero h1 .g{color:#2ECC63}
+.hero h1 em{display:block;font-family:"Barlow Condensed",sans-serif;font-style:normal;
+  font-weight:600;font-size:clamp(15px,1.5vw,20px);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--bone-2);margin-top:20px}
+.hero__sub{margin-top:18px;max-width:44ch;color:var(--bone-2);font-size:17px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(22px,2.6vw,32px)}
+/* the clip sits in a signboard frame, capped at its own native width so it is never enlarged */
+.hero__tv{position:relative;border:4px solid var(--bone);border-radius:3px;overflow:hidden;
+  background:#000;box-shadow:10px 10px 0 var(--red);max-width:640px;justify-self:end;width:100%}
+.hero__tv video{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.hero__tv figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 11px;
+  background:linear-gradient(180deg,rgba(14,13,11,0),rgba(14,13,11,.9));
+  font:600 11px/1 "Barlow Condensed",sans-serif;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--bone)}
+
+/* ---------- the ticker ---------- */
+.tick{background:var(--yellow);border-block:4px solid var(--ink);overflow:hidden;padding:11px 0}
+.tick__row{display:flex;gap:0;width:max-content;
+  /* Two identical copies, translated by exactly one copy. Nothing pauses it: a marquee that
+     stops on hover reads as broken. */
+  animation:tick-run 30s linear infinite;will-change:transform}
+.tick__row span{display:inline-flex;align-items:center;gap:26px;padding-right:26px;
+  font:700 15px/1 "Barlow Condensed",sans-serif;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink);white-space:nowrap}
+.tick__row b{font-weight:700}
+.tick__row i{width:9px;height:9px;background:var(--red);border-radius:50%;display:inline-block;
+  flex:0 0 auto}
+@keyframes tick-run{from{transform:translateX(0)}to{transform:translateX(-25%)}}
+
+/* ---------- the slabs: alternating colour panels ---------- */
+.slab{border-bottom:4px solid var(--ink)}
+.slab__in{max-width:none;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch}
+.slab__pic{position:relative;min-height:clamp(340px,34vw,480px);overflow:hidden}
+/* The photograph is taken out of flow so its own proportions cannot set the row height.
+   Left in flow, a 900x1640 portrait made the catering slab 1739px tall against 539px for the
+   slab above it. Now the copy sets the height and cover does the cropping, so every slab
+   comes out the same shape. */
+.slab__pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slab__txt{display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(30px,4.4vw,72px) clamp(24px,4vw,68px)}
+.slab__txt h2{margin-top:20px;font-size:clamp(28px,3.4vw,48px)}
+.slab__txt p{margin-top:16px;font-size:16.5px;max-width:46ch}
+.slab__txt p + p{margin-top:12px}
+.slab__txt .btn{margin-top:26px;align-self:flex-start}
+.slab--g .slab__txt{background:var(--green-d);color:#fff}
+.slab--g .slab__txt p{color:#E9F7EE}
+.slab--y .slab__txt{background:var(--yellow);color:var(--ink)}
+.slab--y .slab__txt p{color:#2B2A06}
+.slab--r .slab__txt{background:var(--red);color:#fff}
+.slab--r .slab__txt p{color:#FCEAE6}
+/* every other slab puts the picture on the right */
+.slab--flip .slab__pic{order:2}
+
+/* ---------- section heads on black ---------- */
+.sec{position:relative;padding:clamp(48px,6.4vw,96px) 0;border-bottom:4px solid var(--ink)}
+/* two dark sections in a row, and a black border between them, is no border at all */
+.sec--ink + .sec--ink::before,
+.foot::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;
+  background:linear-gradient(90deg,var(--green) 0 33.33%,var(--yellow) 33.33% 66.66%,
+             var(--red) 66.66% 100%)}
+/* and their padding stacks at the join, so the second one starts tighter */
+.sec--ink + .sec--ink{padding-top:clamp(36px,4.6vw,66px)}
+.sec--ink{background:var(--ink)}
+.sec--bone{background:var(--bone);color:var(--ink)}
+.head{text-align:center;max-width:62ch;margin:0 auto clamp(28px,3.6vw,48px);overflow-x:clip}
+.head h2{margin-top:20px;font-size:clamp(30px,4.4vw,58px)}
+.head p{margin-top:16px;font-size:16.5px}
+.sec--ink .head h2{color:var(--bone)}
+.sec--ink .head p{color:var(--bone-2)}
+.sec--bone .head h2{color:var(--ink)}
+.sec--bone .head p{color:#4A443A}
+
+/* ---------- the order builder ---------- */
+.order__in{display:grid;grid-template-columns:minmax(0,1fr) 340px;
+  gap:clamp(20px,2.4vw,34px);align-items:start}
+.where{display:flex;align-items:center;gap:11px;flex-wrap:wrap;background:var(--ink-2);
+  border:3px solid var(--bone);padding:12px 14px;margin-bottom:17px;box-shadow:5px 5px 0 var(--red)}
+.where__l{font:600 11.5px/1.3 "Barlow Condensed",sans-serif;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--bone-2)}
+.seg{display:flex;background:var(--ink);border:2px solid var(--bone-3);gap:0}
+.seg button{background:transparent;color:var(--bone-2);border:0;padding:11px 18px;cursor:pointer;
+  font:700 13px/1 "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  min-height:42px;transition:background-color 150ms ease,color 150ms ease}
+.seg button[aria-pressed="true"]{background:var(--yellow);color:var(--ink)}
+.seg button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.where__s{margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+  font:700 11.5px/1 "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 13px;border:2px solid transparent;min-height:36px}
+.where__s[hidden]{display:none !important}
+.where__s i{width:9px;height:9px;border-radius:50%;display:block}
+
+.cats{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}
+.cat{background:transparent;color:var(--bone-2);border:2px solid var(--bone-3);
+  padding:0 16px;min-height:42px;cursor:pointer;border-radius:2px;
+  font:700 12.5px/1 "Barlow Condensed",sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  transition:background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.cat[aria-pressed="true"]{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.cat:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:14px}
+.item{background:var(--bone);color:var(--ink);border:3px solid var(--ink);border-radius:2px;
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:5px 5px 0 rgba(246,241,228,.16);
+  transition:box-shadow 160ms var(--ease),transform 160ms var(--ease)}
+.item.is-in{box-shadow:5px 5px 0 var(--red)}
+.item__b{padding:14px 15px 15px;display:flex;flex-direction:column;flex:1 1 auto}
+.item h3{font-size:18px;line-height:1.12;color:var(--ink)}
+.item .desc{margin-top:7px;font-size:13.5px;color:#5C5648;flex:1 1 auto}
+.item .veg{display:inline-block;margin-top:9px;font:700 9.5px/1 "Barlow Condensed",sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--green-d);
+  padding:5px 8px}
+.item__r{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px}
+.item__p{font:700 22px/1 "Barlow Condensed",sans-serif;color:var(--ink)}
+.add{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;
+  border:2px solid var(--ink);padding:0 16px;min-height:40px;cursor:pointer;border-radius:2px;
+  font:700 12px/1 "Barlow Condensed",sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  transition:background-color 150ms ease,transform 120ms var(--ease)}
+.add:active{transform:translate(2px,2px)}
+.add:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.qty{display:flex;align-items:center;gap:5px;border:2px solid var(--ink);padding:3px}
+.qty button{width:34px;height:34px;border:0;background:var(--ink);color:var(--bone);cursor:pointer;
+  font:700 18px/1 "Barlow Condensed",sans-serif;transition:background-color 150ms ease}
+.qty button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.qty span{min-width:24px;text-align:center;font:700 15px/1 "Barlow Condensed",sans-serif}
+
+.tray{position:sticky;top:92px;background:var(--bone);color:var(--ink);
+  border:4px solid var(--bone);box-shadow:8px 8px 0 var(--red)}
+.tray__h{background:var(--ink);color:var(--bone);padding:15px 17px}
+.tray__h h3{font-size:22px;color:var(--yellow)}
+.tray__h span{display:block;margin-top:5px;font:600 11px/1.3 "Barlow Condensed",sans-serif;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--bone-2)}
+.tray__b{padding:13px 17px;max-height:44vh;overflow-y:auto}
+.tray__empty{padding:22px 4px;text-align:center;color:#6B6456;font-size:14.5px}
+.tray__l li{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:2px dotted #CFC7B3}
+.tray__l li:last-child{border-bottom:0}
+.tray__n{flex:1 1 auto;font-size:14.5px;line-height:1.35}
+.tray__n b{display:block;font-weight:700;color:var(--ink)}
+.tray__n small{color:#6B6456;font-size:12.5px}
+.tray__x{background:none;border:0;color:#6B6456;cursor:pointer;font-size:20px;line-height:1;
+  min-width:34px;min-height:34px;transition:color 150ms ease}
+.tray__x:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.tray__f{border-top:3px solid var(--ink);padding:15px 17px 17px;background:#EFE9D9}
+.tray__t{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:13px}
+.tray__t span{font:600 11.5px/1 "Barlow Condensed",sans-serif;letter-spacing:.2em;
+  text-transform:uppercase;color:#6B6456}
+.tray__t b{font:700 34px/1 "Barlow Condensed",sans-serif;color:var(--red-d)}
+.tray__f .btn{width:100%}
+.tray__note{margin-top:11px;font-size:12.5px;line-height:1.5;color:#6B6456}
+.cnt{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:2px;
+  background:var(--ink);color:var(--yellow);font:700 12px/1 "Barlow Condensed",sans-serif;padding:0 6px}
+.cnt[hidden]{display:none !important}
+.getpdf{margin-top:clamp(22px,2.8vw,32px);display:flex;flex-wrap:wrap;gap:15px;
+  align-items:center;justify-content:center;text-align:center}
+.getpdf p{font-size:13.5px;color:var(--bone-3);max-width:44ch}
+
+/* ---------- two kitchens ---------- */
+.kits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.6vw,34px)}
+.kit{border:4px solid var(--bone);background:var(--ink-2);box-shadow:8px 8px 0 var(--green)}
+.kit:nth-child(2){box-shadow:8px 8px 0 var(--red)}
+.kit img{width:100%;aspect-ratio:16/10;object-fit:cover;border-bottom:4px solid var(--bone)}
+.kit__b{padding:clamp(20px,2.6vw,30px)}
+.kit h3{font-size:clamp(22px,2.3vw,30px);color:var(--yellow)}
+.kit p{margin-top:11px;color:var(--bone-2);font-size:15px}
+.kit .btn{margin-top:20px}
+
+/* ---------- Tamara ---------- */
+.about{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+  gap:clamp(24px,4vw,64px);align-items:center}
+.about img{width:100%;aspect-ratio:1/1;object-fit:cover;border:4px solid var(--ink);
+  box-shadow:10px 10px 0 var(--yellow)}
+.about h2{margin-top:20px;font-size:clamp(28px,3.4vw,46px);color:var(--ink)}
+.about p{margin-top:16px;color:#4A443A}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:var(--ink-2);border:3px solid var(--bone-3);padding:0 clamp(15px,2vw,24px)}
+.faq details[open]{border-color:var(--yellow)}
+.faq summary{cursor:pointer;list-style:none;padding:17px 0;min-height:36px;
+  font:700 16.5px/1.45 Karla,sans-serif;color:var(--bone);
+  display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 auto;font:700 24px/1 "Barlow Condensed",sans-serif;
+  color:var(--yellow)}
+.faq details[open] summary::after{content:"\2013"}
+.faq details[open] summary{border-bottom:2px dotted var(--ink-3)}
+.faq p{padding:15px 0 19px;color:var(--bone-2);font-size:15.5px;line-height:1.7}
+
+/* ---------- footer ---------- */
+.foot{position:relative;background:var(--ink);padding:clamp(40px,5vw,66px) 0 28px}
+.foot__g{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(3,minmax(0,1fr));
+  gap:clamp(22px,3vw,40px);align-items:start}
+.foot__mark img{width:clamp(150px,15vw,194px);height:auto;margin-bottom:15px}
+.foot__mark p{max-width:34ch;color:var(--bone-2);font-size:14.5px}
+.foot__h{margin:0 0 12px;font:700 12px/1 "Barlow Condensed",sans-serif;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--yellow);font-family:"Barlow Condensed",sans-serif}
+.foot p{color:var(--bone-2);font-size:14.5px}
+.foot a:not(.btn){display:inline-flex;align-items:center;min-height:32px;
+  color:var(--bone-2);font-size:14.5px;text-decoration:none}
+.foot__hrs{margin-top:11px;font-size:13.5px;line-height:1.65;color:var(--bone-3)}
+.foot__end{margin-top:clamp(28px,4vw,44px);padding-top:22px;border-top:2px solid var(--ink-3);
+  text-align:center;color:var(--bone-3);font-size:13px}
+
+/* ---------- the order bar that follows you on a phone ---------- */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
+  background:var(--red);border-top:4px solid var(--ink);padding:10px var(--gut);
+  align-items:center;justify-content:space-between;gap:12px}
+.dock b{font:700 21px/1 "Barlow Condensed",sans-serif;color:#fff}
+.dock span{display:block;font:600 10.5px/1.3 "Barlow Condensed",sans-serif;letter-spacing:.18em;
+  text-transform:uppercase;color:#FFFFFF}
+
+/* ---------- hover belongs to a mouse ---------- */
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ink)}
+  .btn--order:hover{background:var(--red-d)}
+  .btn--ghost:hover{background:var(--bone);color:var(--ink)}
+  .nav a:not(.btn):hover{border-bottom-color:var(--red)}
+  .util a:not(.btn):hover,.foot a:not(.btn):hover{color:var(--yellow)}
+  .cat[aria-pressed="false"]:hover{border-color:var(--yellow);color:var(--bone)}
+  .seg button[aria-pressed="false"]:hover{background:var(--ink-3);color:var(--bone)}
+  .item:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--yellow)}
+  .add:hover{background:var(--red-d)}
+  .qty button:hover{background:var(--red)}
+  .tray__x:hover{color:var(--red)}
+}
+
+/* ---------- widths ---------- */
+@media (max-width:1100px){
+  .order__in{grid-template-columns:minmax(0,1fr)}
+  .tray{position:static}
+}
+@media (max-width:1024px){
+  .nav{display:none}
+  .burger{display:block}
+  .about{grid-template-columns:minmax(0,1fr)}
+  .foot__g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot__mark{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  .hero__in{grid-template-columns:minmax(0,1fr)}
+  .hero__tv{justify-self:stretch;max-width:none;order:-1}
+  .slab__in{grid-template-columns:minmax(0,1fr)}
+  .slab--flip .slab__pic{order:0}
+  .slab__pic{min-height:clamp(240px,52vw,360px)}
+  .kits{grid-template-columns:minmax(0,1fr)}
+  .dock{display:flex}
+  body{padding-bottom:74px}
+}
+@media (max-width:520px){
+  .foot__g{grid-template-columns:minmax(0,1fr)}
+  .util__in{gap:0 16px;font-size:11px;letter-spacing:.12em}
+  .plate{transform:none}
+}
+
+/* ============================================================
+   ENTRANCE MOTION, "poster snap"
+   Short, hard-edged, no blur. A panel comes in from its own side and stops. Nothing is
+   hidden by CSS alone: .js-anim is set by script, and the failsafe rescues whatever the
+   reader can actually see.
+   ============================================================ */
+.js-anim .reveal{opacity:0;transform:translateY(18px);
+  transition:opacity 300ms var(--ease),transform 340ms var(--ease)}
+.js-anim .reveal.is-in{opacity:1;transform:none}
+.js-anim .reveal-d1{transition-delay:50ms}
+.js-anim .reveal-d2{transition-delay:100ms}
+.js-anim .reveal-d3{transition-delay:150ms}
+.js-anim .reveal-d4{transition-delay:200ms}
+
+/* a slab arrives from the side its picture is on */
+.js-anim .slab.reveal{opacity:1;transform:none}
+.js-anim .slab.reveal .slab__pic{opacity:0;transform:translateX(-34px);
+  transition:opacity 340ms var(--ease),transform 380ms var(--ease)}
+.js-anim .slab--flip.reveal .slab__pic{transform:translateX(34px)}
+.js-anim .slab.reveal .slab__txt{opacity:0;transform:translateX(34px);
+  transition:opacity 340ms var(--ease) 70ms,transform 380ms var(--ease) 70ms}
+.js-anim .slab--flip.reveal .slab__txt{transform:translateX(-34px)}
+.js-anim .slab.reveal.is-in .slab__pic,
+.js-anim .slab.reveal.is-in .slab__txt{opacity:1;transform:none}
+
+/* the signboard plate lands last, and lands crooked */
+.js-anim .plate{opacity:0;transform:rotate(-1.2deg) translateY(10px) scale(.96);
+  transition:opacity 280ms var(--ease) 120ms,transform 320ms var(--ease) 120ms}
+.js-anim .is-in .plate,.js-anim .plate.is-in{opacity:1;transform:rotate(-1.2deg)}
+
+/* the menu cards wait for the section, and animate transform only, so a hidden tab
+   with a frozen timeline can never leave them invisible */
+@keyframes item-in{from{transform:translateY(14px)}to{transform:none}}
+.js-anim #order.is-live .item{animation:item-in 300ms var(--ease) both}
+.js-anim #order.is-live .item:nth-child(2){animation-delay:40ms}
+.js-anim #order.is-live .item:nth-child(3){animation-delay:80ms}
+.js-anim #order.is-live .item:nth-child(4){animation-delay:110ms}
+.js-anim #order.is-live .item:nth-child(5){animation-delay:140ms}
+.js-anim #order.is-live .item:nth-child(6){animation-delay:165ms}
+.js-anim #order.is-live .item:nth-child(n+7){animation-delay:190ms}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:1ms !important}
+  .tick__row{animation:none}
+  .js-anim .reveal,.js-anim .reveal *,.js-anim .plate,
+  .js-anim .slab__pic,.js-anim .slab__txt{opacity:1 !important;transform:none !important;
+    animation:none !important}
+  .js-anim .plate{transform:rotate(-1.2deg) !important}
+  .js-anim #order.is-live .item{animation:none}
+}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="util__in">
+    <span><i></i>Open 11am, Mon to Sat</span>
+    <a href="tel:+13039975623">Centennial (303) 997-5623</a>
+    <a href="tel:+17204102956">Denver (720) 410-2956</a>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="mark" href="#top">
+      <img src="assets/logo/reggae-pot-logo-horizontal.png" alt="Reggae Pot Jamaican Grill" width="797" height="119">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#order">Order</a>
+      <a href="#food">Food</a>
+      <a href="#kitchens">Kitchens</a>
+      <a href="#catering">Catering</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--order btn--sm" href="#order">Order Online <span class="cnt" id="cnt" hidden>0</span></a>
+    </nav>
+    <button class="burger" type="button" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ THE POSTER ============ -->
+  <section class="hero">
+    <div class="hero__in">
+      <div>
+        <span class="plate plate--y">Centennial &middot; Denver</span>
+        <h1>Jerk. <span class="y">Curry.</span><br><span class="g">Oxtail.</span>
+          <em>Order ahead &middot; Skip the line</em></h1>
+        <p class="hero__sub">Scotch bonnet and slow fire, out of Tamara's kitchen. Send your
+          order to the kitchen now, walk in later, and collect it without standing in the line.</p>
+        <div class="hero__cta">
+          <a class="btn btn--order" href="#order">Order Online</a>
+          <a class="btn btn--ghost" href="#food">See the Food</a>
+        </div>
+      </div>
+      <figure class="hero__tv">
+        <video id="herovid" muted loop playsinline preload="none" poster="assets/web/hero-food-poster.webp"
+               aria-label="Footage from the Reggae Pot kitchen: ackee in the pan, jerk chicken being sauced, plantains frying and plates going out">
+          <source src="assets/web/hero-food.mp4" type="video/mp4">
+        </video>
+        <figcaption>Live from the kitchen</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <div class="tick" aria-hidden="true">
+    <div class="tick__row">
+      <span><i></i><b>Order Ahead</b><i></i><b>Skip the Line</b><i></i><b>No Wait</b><i></i><b>Two Denver Metro Kitchens</b><i></i><b>Jerk Chicken</b><i></i><b>Curry Goat</b><i></i><b>Oxtail</b><i></i><b>Ackee and Salt Fish</b></span>
+      <span><i></i><b>Order Ahead</b><i></i><b>Skip the Line</b><i></i><b>No Wait</b><i></i><b>Two Denver Metro Kitchens</b><i></i><b>Jerk Chicken</b><i></i><b>Curry Goat</b><i></i><b>Oxtail</b><i></i><b>Ackee and Salt Fish</b></span>
+      <span><i></i><b>Order Ahead</b><i></i><b>Skip the Line</b><i></i><b>No Wait</b><i></i><b>Two Denver Metro Kitchens</b><i></i><b>Jerk Chicken</b><i></i><b>Curry Goat</b><i></i><b>Oxtail</b><i></i><b>Ackee and Salt Fish</b></span>
+      <span><i></i><b>Order Ahead</b><i></i><b>Skip the Line</b><i></i><b>No Wait</b><i></i><b>Two Denver Metro Kitchens</b><i></i><b>Jerk Chicken</b><i></i><b>Curry Goat</b><i></i><b>Oxtail</b><i></i><b>Ackee and Salt Fish</b></span>
+    </div>
+  </div>
+
+  <!-- ============ THE SLABS ============ -->
+  <section id="food">
+    <div class="slab slab--g">
+      <div class="slab__in">
+        <div class="slab__pic">
+          <img src="assets/appetite/glossy.webp" alt="Jerk chicken pieces in sauce on a blue plate" width="1000" height="562" loading="lazy">
+        </div>
+        <div class="slab__txt">
+          <span class="plate">Off the Grill</span>
+          <h2>Overnight in Scotch Bonnet</h2>
+          <p>Jerk chicken sits overnight in scotch bonnet and pimento, goes on the grill, then
+            gets sauced as it leaves the kitchen. Jerk pork, jerk shrimp and jerk barbecue ribs
+            come off the same grill, and every one is served with two sides.</p>
+          <p>If you want the heat without the bone, the jerk wings and the jerk chicken salad do
+            the same job in a smaller plate.</p>
+          <a class="btn btn--y" href="#order">Order Off the Grill</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slab slab--y slab--flip">
+      <div class="slab__in">
+        <div class="slab__pic">
+          <img src="assets/appetite/table.webp" alt="Blue plates of curry chicken, jerk ribs and sides set out on a table" width="1000" height="562" loading="lazy">
+        </div>
+        <div class="slab__txt">
+          <span class="plate plate--g">Out of the Pot</span>
+          <h2>Until It Gives Up the Bone</h2>
+          <p>Oxtail goes on early and stays on until it gives up the bone. Curry goat is cooked
+            long and low, and brown stew chicken is browned down and finished in its own gravy.
+            Curry chicken is simmered with potato and carrot the way it is at home.</p>
+          <p>Ackee and salt fish, the national dish of Jamaica, is on the menu every day, and so
+            is escoveitch red snapper, fried whole and dressed with peppers and vinegar.</p>
+          <a class="btn btn--order" href="#order">Order From the Pot</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slab slab--r">
+      <div class="slab__in">
+        <div class="slab__pic">
+          <img src="assets/frames/f1.webp" alt="Overhead view of blue plates with fried plantain, rice and peas, salad and mango" width="760" height="760" loading="lazy">
+        </div>
+        <div class="slab__txt">
+          <span class="plate plate--y">Sides, Patties and Juice</span>
+          <h2>What Carries the Plate</h2>
+          <p>Rice and peas cooked in coconut milk, festival, ripe fried plantain, steamed cabbage
+            and macaroni pie. There is a set of vegan dishes on the menu alongside the meat, and
+            they are marked so you can find them fast.</p>
+          <p>Patties are baked to order and folded to travel, which makes them the easiest thing
+            to add to a pickup order. Fresh homemade juices are made in house.</p>
+          <a class="btn btn--y" href="#order">Add Sides to a Tray</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE ORDER BUILDER ============ -->
+  <section class="sec sec--ink" id="order">
+    <div class="wrap">
+      <div class="head">
+        <span class="plate plate--r">Feeling Hungry</span>
+        <h2>Build Your Tray</h2>
+        <p>Tap to add. The total updates as you go, then you hand the tray straight to your
+          kitchen. Every price is the price you pay at the counter.</p>
+      </div>
+
+      <div class="order__in">
+        <div>
+          <div class="where">
+            <span class="where__l" id="wl">Ordering from</span>
+            <div class="seg" role="group" aria-labelledby="wl">
+              <button type="button" data-loc="centennial" aria-pressed="true">Centennial</button>
+              <button type="button" data-loc="denver" aria-pressed="false">Denver</button>
+            </div>
+            <span class="where__s" id="wstat" hidden><i></i><span></span></span>
+          </div>
+
+          <div class="cats" role="group" aria-label="Menu sections" id="cats"></div>
+          <ul class="items" id="items"></ul>
+
+          <div class="getpdf">
+            <a class="btn btn--ghost" href="assets/reggae-pot-menu.pdf" target="_blank" rel="noopener" type="application/pdf">Download the Menu</a>
+            <p>One page, both kitchens, every price. PDF, 250KB, made to print or to keep on
+              your phone.</p>
+          </div>
+        </div>
+
+        <aside class="tray" id="tray" aria-label="Your tray">
+          <div class="tray__h"><h3>Your Tray</h3><span id="trayWhere">Centennial pickup</span></div>
+          <div class="tray__b">
+            <p class="tray__empty" id="trayEmpty">Nothing on it yet. Tap a dish to start.</p>
+            <ul class="tray__l" id="trayList"></ul>
+          </div>
+          <div class="tray__f">
+            <div class="tray__t"><span>Total</span><b id="total" aria-live="polite">$0.00</b></div>
+            <a class="btn btn--order" id="checkout" href="https://reggaepotjamaicangrill.com/order-centennial">Take it to Checkout</a>
+            <p class="tray__note">Your tray opens the kitchen's own ordering page, where you
+              confirm and pay. Prices shown are that kitchen's menu.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TWO KITCHENS ============ -->
+  <section class="sec sec--ink" id="kitchens">
+    <div class="wrap">
+      <div class="head">
+        <span class="plate plate--g">Pick Your Counter</span>
+        <h2>Two Kitchens, One Pot</h2>
+        <p>Reggae Pot runs two kitchens in the south Denver metro, one in Centennial and one in
+          Denver. Each takes its own orders and keeps its own menu, so start by choosing the
+          counter you are collecting from.</p>
+      </div>
+      <div class="kits">
+        <article class="kit">
+          <img src="assets/frames/f3.webp" alt="Jerk chicken salad with lettuce, tomato, cucumber and mango on a blue plate" width="760" height="760" loading="lazy">
+          <div class="kit__b">
+            <h3>Centennial</h3>
+            <p>7562 S University Blvd Unit C, Centennial, CO 80122.<br>Mon to Thu 11am to 8pm, Fri and Sat 11am to 9pm, open Sunday.</p>
+            <a class="btn btn--order" href="https://reggaepotjamaicangrill.com/order-centennial">Order From Centennial</a>
+          </div>
+        </article>
+        <article class="kit">
+          <img src="assets/appetite/pour.webp" alt="Jerk sauce being poured over grilled chicken on a dark plate" width="1280" height="720" loading="lazy">
+          <div class="kit__b">
+            <h3>Denver</h3>
+            <p>2243 S Monaco St Pkwy #104, Denver, CO 80222.<br>Mon to Thu 11am to 8pm, Fri and Sat 11am to 9pm, closed Sunday.</p>
+            <a class="btn btn--order" href="https://reggaepotjamaicangrill.com/order-denver">Order From Denver</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAMARA ============ -->
+  <section class="sec sec--bone" id="about">
+    <div class="wrap">
+      <div class="about">
+        <img src="assets/web/owner-tamara.webp" alt="Tamara, the owner of Reggae Pot Jamaican Grill, seated in the dining room" width="700" height="700" loading="lazy">
+        <div>
+          <span class="plate plate--r">The Kitchen</span>
+          <h2>Cooked the Way It Is Cooked at Home</h2>
+          <p>Oxtail goes on early and stays on until it gives up the bone. Jerk sits overnight in
+            scotch bonnet and pimento before it ever sees the grill. Nothing is rushed to the
+            counter, which is exactly why ordering ahead is worth it.</p>
+          <p><a class="btn btn--order" href="#order" style="margin-top:22px">Build Your Tray</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATERING ============ -->
+  <div class="slab slab--g slab--flip" id="catering">
+    <div class="slab__in">
+      <div class="slab__pic">
+        <img src="assets/web/spread.webp" alt="An overhead spread of blue plates: jerk chicken salad, curry chicken, jerk ribs and sides" width="900" height="1640" loading="lazy">
+      </div>
+      <div class="slab__txt">
+        <span class="plate plate--y">For a Crowd</span>
+        <h2>Catering Across the Denver Metro</h2>
+        <p>Trays of jerk chicken, curry goat, rice and peas and festival for offices, churches
+          and family gatherings. Tell us the headcount and the date and we will work the menu
+          around it, including the vegan dishes so nobody at the table is left out.</p>
+        <a class="btn btn--y" href="tel:+13039975623">Call to Plan Catering</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec sec--ink" id="faq">
+    <div class="wrap">
+      <div class="head">
+        <span class="plate plate--y">Before You Order</span>
+        <h2>Questions We Get Asked</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Where is Reggae Pot Jamaican Grill located?</summary>
+          <p>There are two kitchens in the south Denver metro. The Centennial kitchen is at
+            7562 S University Blvd Unit C, Centennial, CO 80122. The Denver kitchen is at
+            2243 S Monaco St Pkwy #104, Denver, CO 80222.</p>
+        </details>
+        <details>
+          <summary>What are your hours?</summary>
+          <p>Both kitchens open at 11am. Monday to Thursday they close at 8pm, and Friday and
+            Saturday they close at 9pm. The Centennial kitchen is open on Sunday and the Denver
+            kitchen is closed on Sunday.</p>
+        </details>
+        <details>
+          <summary>Can I order Jamaican food online for pickup?</summary>
+          <p>Yes. Build your tray on this page, then send it to the kitchen you are collecting
+            from. Your order goes in the moment you confirm it, so it is cooked to your pickup
+            time rather than started when you walk in.</p>
+        </details>
+        <details>
+          <summary>Do the two kitchens have the same menu and prices?</summary>
+          <p>The menus are close but not identical, and two dishes cost slightly more at the
+            Denver kitchen. The prices on this page follow whichever counter you have selected,
+            and the difference is marked on the line.</p>
+        </details>
+        <details>
+          <summary>What is the most popular dish?</summary>
+          <p>Jerk chicken and oxtail are the two plates ordered most. Jerk chicken is marinated
+            overnight in scotch bonnet and pimento then finished on the grill, and oxtail is
+            stewed down until it gives up the bone. Both come with two sides.</p>
+        </details>
+        <details>
+          <summary>Do you have vegan options?</summary>
+          <p>Yes. There is a set of vegan dishes on the menu alongside the meat plates, and the
+            fresh homemade juices are made in house. Vegan items are marked in the menu on this
+            page so you can find them quickly.</p>
+        </details>
+        <details>
+          <summary>Do you cater events in Denver?</summary>
+          <p>Yes. Catering runs across the Denver metro for offices, churches and family
+            gatherings, with trays of jerk chicken, curry goat, rice and peas and festival.
+            Call the Centennial kitchen on (303) 997-5623 to plan it.</p>
+        </details>
+        <details>
+          <summary>What is ackee and salt fish?</summary>
+          <p>It is the national dish of Jamaica: ackee, a soft yellow fruit, cooked down with
+            salted cod, peppers and onion. It is on the Reggae Pot menu every day, and it is one
+            of the traditional dishes the kitchen is known for.</p>
+        </details>
+      </div>
+      <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
+        <a class="btn btn--order" href="#order">Build Your Tray</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__g">
+      <div class="foot__mark">
+        <img src="assets/logo/reggae-pot-logo-horizontal.png" alt="Reggae Pot Jamaican Grill" width="797" height="119" loading="lazy">
+        <p>Jerk, curry and oxtail out of two kitchens in the south Denver metro. Order ahead and
+          collect it without standing in the line.</p>
+      </div>
+      <div>
+        <h3 class="foot__h">Centennial</h3>
+        <p>7562 S University Blvd Unit C<br>Centennial, CO 80122</p>
+        <p style="margin-top:6px"><a href="tel:+13039975623">(303) 997-5623</a></p>
+        <p class="foot__hrs">Mon to Thu 11am to 8pm<br>Fri and Sat 11am to 9pm<br>Open Sunday</p>
+      </div>
+      <div>
+        <h3 class="foot__h">Denver</h3>
+        <p>2243 S Monaco St Pkwy #104<br>Denver, CO 80222</p>
+        <p style="margin-top:6px"><a href="tel:+17204102956">(720) 410-2956</a></p>
+        <p class="foot__hrs">Mon to Thu 11am to 8pm<br>Fri and Sat 11am to 9pm<br>Closed Sunday</p>
+      </div>
+      <div>
+        <h3 class="foot__h">Order</h3>
+        <ul>
+          <li><a href="#order">Build a Tray</a></li>
+          <li><a href="https://reggaepotjamaicangrill.com/order-centennial">Order From Centennial</a></li>
+          <li><a href="https://reggaepotjamaicangrill.com/order-denver">Order From Denver</a></li>
+          <li><a href="#catering">Catering</a></li>
+          <li><a href="assets/reggae-pot-menu.pdf" target="_blank" rel="noopener" type="application/pdf">Download the Menu (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot__end">Reggae Pot Jamaican Grill. Authentic Jamaican grill, Centennial and Denver, Colorado.</p>
+  </div>
+</footer>
+
+<div class="dock">
+  <div><b id="mtotal">$0.00</b><span>Your tray</span></div>
+  <a class="btn btn--y btn--sm" href="#order">Order Online</a>
+</div>
+
+<script>
+(function(){
+  /* ---------- the menu ----------
+     Prices read straight off the client's own ordering storefront. Where the two
+     kitchens differ, both numbers are held and the card follows the chosen kitchen. */
+  var MENU=[
+   {c:'Meals',   n:'Oxtail',                 p:25.00, ph:'oxtail',       d:'Stewed down slow until it gives up the bone. Served with two sides.'},
+   {c:'Meals',   n:'Curry Goat',             p:23.00,                    d:'Bone-in goat, curried long and low. Two sides.'},
+   {c:'Meals',   n:'Curry Goat Roti',        p:24.00,                    d:'The same curry goat, wrapped to travel.'},
+   {c:'Meals',   n:'Jerk Chicken',           p:21.00, ph:'jerkchicken', heat:1, d:'Marinated overnight in scotch bonnet and pimento, then sauced.'},
+   {c:'Meals',   n:'Jerk Pork',              p:18.99, heat:1,            d:'Jerk-rubbed pork off the grill. Two sides.'},
+   {c:'Meals',   n:'Jerk Shrimp',            p:20.00, heat:1,            d:'Shrimp off the grill with jerk seasoning.'},
+   {c:'Meals',   n:'Jerk BBQ Ribs',          p:22.50, ph:'ribs', heat:1, d:'Jerk-rubbed and finished until the glaze catches.'},
+   {c:'Meals',   n:'Curry Chicken',          p:18.99, ph:'currychicken', d:'Simmered with potato and carrot.'},
+   {c:'Meals',   n:'Curry Chicken Roti',     p:19.99, pDenver:18.00,     d:'Curry chicken wrapped in a roti.'},
+   {c:'Meals',   n:'Brown Stew Chicken',     p:18.99,                    d:'Browned down and stewed with the gravy.'},
+   {c:'Meals',   n:'Ackee & Salt Fish',      p:24.00, ph:'ackee',        d:"Jamaica's national dish, with peppers and onion."},
+   {c:'Meals',   n:'Escoveitch Red Snapper', p:39.99, pDenver:34.99,     d:'Whole fish with peppers and vinegar.'},
+   {c:'Meals',   n:'Curry Potatoes & Veggies',p:16.00, veg:1,            d:'Curried potato and vegetables. Two sides.'},
+
+   {c:'Starters',n:'Jerk Wings Starter',     p:8.99,  ph:'wings', heat:1,d:'Marinated overnight, grilled to order.'},
+   {c:'Starters',n:'Fried Jerk Wings',       p:8.99,  heat:1,            d:'The same wings, fried instead of grilled.'},
+   {c:'Starters',n:'Ackee & Salt Fish Cups', p:14.99,                    d:'Ackee and saltfish in pastry cups.'},
+   {c:'Starters',n:'Vegan Ackee Cups',       p:13.99, veg:1,             d:'The same cups, without the saltfish.'},
+   {c:'Starters',n:"Leighton's Special",     p:15.00,                    d:'The house starter.'},
+
+   {c:'Rasta Pasta',n:'With Jerk Chicken',   p:23.99, heat:1,            d:'Creamy pasta with peppers and jerk chicken.'},
+   {c:'Rasta Pasta',n:'With Shrimp',         p:24.50,                    d:'Creamy pasta with peppers and shrimp.'},
+   {c:'Rasta Pasta',n:'With Oxtail',         p:26.99,                    d:'Creamy pasta with peppers and oxtail.'},
+
+   {c:'Lunch',   n:'Lunch Jerk Chicken',     p:15.00, heat:1,            d:'The lunch portion, off the grill.'},
+   {c:'Lunch',   n:'Lunch Curry Chicken',    p:12.99,                    d:'The lunch portion, curried.'},
+   {c:'Lunch',   n:'Lunch Brown Stew',       p:12.99,                    d:'The lunch portion, browned down.'},
+   {c:'Lunch',   n:'Jerk Chicken Salad',     p:14.00, ph:'salad',        d:'Jerk chicken over leaves, tomato and cucumber.'},
+   {c:'Lunch',   n:'Jerk Shrimp Salad',      p:15.00,                    d:'Jerk shrimp over leaves, tomato and cucumber.'},
+   {c:'Lunch',   n:'Oxtail Cheese Steak',    p:18.00,                    d:'Oxtail, peppers and cheese in a roll.'},
+   {c:'Lunch',   n:'Jerk Chicken Cheese Steak',p:16.00, heat:1,          d:'Jerk chicken, peppers and cheese in a roll.'},
+
+   {c:'Patties', n:'Beef Patty',             p:4.25,  ph:'patty',        d:'Golden pastry, seasoned beef.'},
+   {c:'Patties', n:'Curry Chicken Patty',    p:4.50,                     d:'Golden pastry, curried chicken.'},
+   {c:'Patties', n:'Jerk Chicken Patty',     p:4.50,  heat:1,            d:'Golden pastry, jerk chicken.'},
+   {c:'Patties', n:'Veggie Patty',           p:4.00,  veg:1,             d:'Golden pastry, vegetables.'},
+   {c:'Patties', n:'Cheesy Beef Patty',      p:4.99,                     d:'Beef patty with cheese through it.'},
+   {c:'Patties', n:'Coco Bread',             p:3.00,                     d:'Soft coco bread. Put the patty inside it.'},
+
+   {c:'Sides',   n:'Rice & Peas',            p:4.99,  veg:1,             d:'Cooked in coconut milk.'},
+   {c:'Sides',   n:'Ripe Fried Plantains',   p:6.99,  ph:'plantain', veg:1,d:'Sweet, fried till the edges go dark.'},
+   {c:'Sides',   n:'Steamed Cabbage',        p:5.50,  veg:1,             d:'Steamed with carrot and pepper.'},
+   {c:'Sides',   n:'Baked Mac N Cheese',     p:6.00,                     d:'Baked until the top sets.'},
+   {c:'Sides',   n:'Fried Festival',         p:4.50,                     d:'Sweet fried dumpling.'},
+   {c:'Sides',   n:'Fried Dumpling',         p:4.50,                     d:'Plain fried dumpling.'},
+   {c:'Sides',   n:'Collar Green',           p:6.99,                     d:'Slow-cooked greens.'},
+   {c:'Sides',   n:'Potato Salad',           p:5.50,                     d:'House potato salad.'},
+   {c:'Sides',   n:'Mac Salad',              p:5.50,                     d:'House macaroni salad.'},
+   {c:'Sides',   n:'Veggie Salad',           p:4.00,  veg:1,             d:'Leaves, tomato and cucumber.'},
+   {c:'Sides',   n:'French Fries',           p:3.50,  veg:1,             d:'Straight-cut fries.'},
+   {c:'Sides',   n:'White Rice',             p:4.25,  veg:1,             d:'Plain steamed rice.'},
+   {c:'Sides',   n:'Corn Bread',             p:4.50,                     d:'House corn bread.'},
+   {c:'Sides',   n:'Roti',                   p:6.00,                     d:'Soft roti on its own.'},
+
+   {c:'Drinks',  n:'Tropical Rhythm',        p:4.50,                     d:'Jamaican fruit drink.'},
+   {c:'Drinks',  n:'Ting',                   p:4.25,                     d:'Grapefruit soda.'},
+   {c:'Drinks',  n:'Ginger Beer',            p:4.25,                     d:'Proper ginger heat.'},
+   {c:'Drinks',  n:'Kola Champagne',         p:4.00,                     d:'Jamaican soda.'},
+   {c:'Drinks',  n:'Cream Soda',             p:4.00,                     d:'Jamaican soda.'},
+   {c:'Drinks',  n:'Pineapple Soda',         p:4.00,                     d:'Jamaican soda.'},
+   {c:'Drinks',  n:'Vita Malt',              p:4.00,                     d:'Malt drink.'},
+   {c:'Drinks',  n:'Supligen',               p:4.50,                     d:'Malt nutrition drink.'},
+   {c:'Drinks',  n:'Peanut Irish Moss',      p:4.50,                     d:'Thick, sweet and cold.'},
+   {c:'Drinks',  n:'Canned Soda',            p:2.00,                     d:'Coke, Pepsi or Sprite.'},
+   {c:'Drinks',  n:'Bottled Water',          p:1.50,                     d:'Still water.'},
+
+   {c:'Sweets',  n:'Sweet Potato Pudding',   p:4.50,                     d:'Dense, dark and spiced.'},
+   {c:'Sweets',  n:'Rum Fruitcake',          p:6.00,                     d:'Rich fruitcake with rum.'},
+   {c:'Sweets',  n:'Sorrel Fruitcake',       p:6.00,                     d:'Fruitcake with sorrel.'},
+   {c:'Sweets',  n:'Coconut Drops',          p:5.00,                     d:'Chewy coconut and ginger.'},
+   {c:'Sweets',  n:'Coconut White Cake',     p:4.00,                     d:'Light coconut cake.'},
+   {c:'Sweets',  n:'Pineapple Upside-Down Cake',p:4.00,                  d:'Baked with the fruit on top.'},
+
+   {c:'Kids',    n:'Chicken Strips',         p:6.99,                     d:'For the small ones.'},
+   {c:'Kids',    n:'Chicken Drumstick',      p:6.99,                     d:'For the small ones.'}
+  ];
+
+  var PLACES={
+    centennial:{name:'Centennial',url:'https://reggaepotjamaicangrill.com/order-centennial'},
+    denver:{name:'Denver',url:'https://monaco.reggaepotjamaicangrill.com/'}
+  };
+  var HOURS={
+    centennial:{0:[11,19],1:[11,20],2:[11,20],3:[11,20],4:[11,20],5:[11,21],6:[11,21]},
+    denver:{1:[11,20],2:[11,20],3:[11,20],4:[11,20],5:[11,21],6:[11,21]}
+  };
+  var DAY=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var KEY='rp-tray';
+  var state={loc:'centennial',cat:'Meals',tray:{}};
+  try{
+    var raw=window.localStorage.getItem(KEY);
+    if(raw){
+      var got=JSON.parse(raw);
+      if(got){
+        if(PLACES[got.loc]){state.loc=got.loc;}
+        if(got.tray){state.tray=got.tray;}
+      }
+    }
+  }catch(e){}
+  function save(){try{window.localStorage.setItem(KEY,JSON.stringify({loc:state.loc,tray:state.tray}));}catch(e){}}
+  function price(it){
+    if(state.loc==='denver'){if(it.pDenver){return it.pDenver;}}
+    return it.p;
+  }
+  function money(n){return '$'+n.toFixed(2);}
+
+  /* ---------- open or closed, in the restaurant's own timezone ---------- */
+  function label(h){var s='am',v=h;if(h>=12){s='pm';}if(h>12){v=h-12;}if(h===0){v=12;}return v+s;}
+  function denverNow(){
+    var f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Denver',weekday:'short',hour:'numeric',minute:'numeric',hour12:false});
+    var parts=f.formatToParts(new Date()),o={};
+    for(var i=0;i<parts.length;i++){o[parts[i].type]=parts[i].value;}
+    var m={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var h=parseInt(o.hour,10);if(h===24){h=0;}
+    return {day:m[o.weekday],mins:h*60+parseInt(o.minute,10)};
+  }
+  function statusFor(key){
+    var t=denverNow();
+    if(t.day===undefined){return null;}
+    var today=HOURS[key][t.day];
+    if(today){
+      if(t.mins>=today[0]*60){if(t.mins<today[1]*60){return {open:true,text:'Open until '+label(today[1])};}}
+      else{return {open:false,text:'Opens '+label(today[0])+' today'};}
+    }
+    for(var i=1;i<=7;i++){
+      var d=(t.day+i)%7,nx=HOURS[key][d];
+      if(nx){var w=DAY[d];if(i===1){w='tomorrow';}return {open:false,text:'Opens '+label(nx[0])+' '+w};}
+    }
+    return null;
+  }
+
+  /* ---------- render ---------- */
+  var catsEl=document.getElementById('cats'),itemsEl=document.getElementById('items');
+  var trayList=document.getElementById('trayList'),trayEmpty=document.getElementById('trayEmpty');
+  var totalEl=document.getElementById('total'),mtotalEl=document.getElementById('mtotal');
+  var cntEl=document.getElementById('cnt'),checkout=document.getElementById('checkout');
+  var trayWhere=document.getElementById('trayWhere'),wstat=document.getElementById('wstat');
+  var cats=[];
+  for(var i=0;i<MENU.length;i++){if(cats.indexOf(MENU[i].c)<0){cats.push(MENU[i].c);}}
+
+  function drawCats(){
+    catsEl.innerHTML='';
+    for(var i=0;i<cats.length;i++){
+      var b=document.createElement('button');
+      b.type='button';b.className='cat';b.textContent=cats[i];
+      b.setAttribute('aria-pressed',cats[i]===state.cat?'true':'false');
+      b.setAttribute('data-c',cats[i]);
+      b.addEventListener('click',function(){state.cat=this.getAttribute('data-c');drawCats();drawItems();});
+      catsEl.appendChild(b);
+    }
+  }
+  function idOf(it){return it.c+'|'+it.n;}
+  function drawItems(){
+    itemsEl.innerHTML='';
+    for(var i=0;i<MENU.length;i++){
+      var it=MENU[i];
+      if(it.c!==state.cat){continue;}
+      var id=idOf(it),qty=state.tray[id]?state.tray[id].q:0;
+      var li=document.createElement('li');
+      li.className='item'+(qty>0?' is-in':'');
+      li.innerHTML=
+        '<div class="item__b"><h3>'+it.n+'</h3><p class="desc">'+it.d+'</p>'+
+        (it.veg?'<span class="veg">Vegan</span>':'')+
+        '<div class="item__r"><span class="item__p">'+money(price(it))+'</span><span class="act"></span></div></div>';
+      var act=li.querySelector('.act');
+      if(qty>0){
+        var q=document.createElement('span');q.className='qty';
+        q.innerHTML='<button type="button" aria-label="One less '+it.n+'">&minus;</button><span>'+qty+'</span><button type="button" aria-label="One more '+it.n+'">+</button>';
+        (function(id2){
+          q.children[0].addEventListener('click',function(){bump(id2,-1);});
+          q.children[2].addEventListener('click',function(){bump(id2,1);});
+        })(id);
+        act.appendChild(q);
+      }else{
+        var a=document.createElement('button');
+        a.type='button';a.className='add';a.textContent='Add';
+        a.setAttribute('aria-label','Add '+it.n+' to your tray');
+        (function(it2){a.addEventListener('click',function(){add(it2);});})(it);
+        act.appendChild(a);
+      }
+      itemsEl.appendChild(li);
+    }
+  }
+  function add(it){
+    var id=idOf(it);
+    if(state.tray[id]){state.tray[id].q++;}
+    else{state.tray[id]={n:it.n,c:it.c,q:1};}
+    save();drawItems();drawTray();
+  }
+  function bump(id,by){
+    if(!state.tray[id]){return;}
+    state.tray[id].q=state.tray[id].q+by;
+    if(state.tray[id].q<1){delete state.tray[id];}
+    save();drawItems();drawTray();
+  }
+  function lookup(id){
+    for(var i=0;i<MENU.length;i++){if(idOf(MENU[i])===id){return MENU[i];}}
+    return null;
+  }
+  function drawTray(){
+    trayList.innerHTML='';
+    var total=0,count=0,any=false;
+    for(var id in state.tray){
+      if(!Object.prototype.hasOwnProperty.call(state.tray,id)){continue;}
+      var it=lookup(id);
+      if(!it){continue;}
+      any=true;
+      var row=state.tray[id],line=price(it)*row.q;
+      total+=line;count+=row.q;
+      var li=document.createElement('li');
+      li.innerHTML='<span class="tray__n"><b>'+row.q+' &times; '+it.n+'</b><small>'+it.c+' &middot; '+money(line)+'</small></span>';
+      var x=document.createElement('button');
+      x.type='button';x.className='tray__x';x.innerHTML='&times;';
+      x.setAttribute('aria-label','Remove '+it.n+' from your tray');
+      (function(id2){x.addEventListener('click',function(){delete state.tray[id2];save();drawItems();drawTray();});})(id);
+      li.appendChild(x);
+      trayList.appendChild(li);
+    }
+    trayEmpty.hidden=any;
+    totalEl.textContent=money(total);
+    mtotalEl.textContent=money(total);
+    cntEl.textContent=String(count);
+    cntEl.hidden=count===0;
+    checkout.setAttribute('href',PLACES[state.loc].url);
+    checkout.textContent=count===0?'Take it to Checkout':'Take '+count+' item'+(count===1?'':'s')+' to Checkout';
+    trayWhere.textContent=PLACES[state.loc].name+' pickup';
+  }
+  function drawStatus(){
+    var st=statusFor(state.loc);
+    if(!st){wstat.setAttribute('hidden','');return;}
+    wstat.querySelector('span').textContent=st.text;
+    wstat.style.color=st.open?'#7BE8A4':'#FF9C8C';
+    wstat.style.borderColor=st.open?'#7BE8A4':'#FF9C8C';
+    wstat.querySelector('i').style.background=st.open?'#2ECC63':'#FF6A5A';
+    wstat.removeAttribute('hidden');
+  }
+  var segBtns=[].slice.call(document.querySelectorAll('.seg button'));
+  for(var s=0;s<segBtns.length;s++){
+    segBtns[s].addEventListener('click',function(){
+      state.loc=this.getAttribute('data-loc');
+      for(var j=0;j<segBtns.length;j++){segBtns[j].setAttribute('aria-pressed',segBtns[j]===this?'true':'false');}
+      save();drawItems();drawTray();drawStatus();
+    });
+  }
+  for(var s2=0;s2<segBtns.length;s2++){
+    segBtns[s2].setAttribute('aria-pressed',segBtns[s2].getAttribute('data-loc')===state.loc?'true':'false');
+  }
+  try{drawStatus();}catch(e){}
+  drawCats();drawItems();drawTray();
+
+  /* ---------- measure the thing the pilot is paid on ---------- */
+  function track(n,p){if(typeof window.gtag==='function'){try{window.gtag('event',n,p);}catch(e){}}}
+  checkout.addEventListener('click',function(){
+    var c=0;
+    for(var id in state.tray){if(Object.prototype.hasOwnProperty.call(state.tray,id)){c+=state.tray[id].q;}}
+    track('order_click',{location:state.loc,items:c,value:totalEl.textContent});
+  });
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a'):null;
+    if(!a){return;}
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('catering.reggaepotjamaicangrill')>-1){track('catering_click',{link_url:h});return;}
+    if(h.indexOf('reggae-pot-menu.pdf')>-1){track('menu_download',{link_url:h});return;}
+    if(h.indexOf('tel:')===0){track('call_click',{link_url:h});return;}
+  });
+})();
+</script>
+
+<script>
+(function(){
+  /* The banner clip is decorative: it costs nothing until it is on screen, stays still for a
+     reader who asked for reduced motion, and drops to a lighter file on a narrow screen. */
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var thrifty=false;
+  if(navigator.connection){
+    if(navigator.connection.saveData===true){thrifty=true;}
+    if(/2g/.test(navigator.connection.effectiveType||'')){thrifty=true;}
+  }
+  var v=document.getElementById('herovid');
+  if(v){
+    if(reduced===false){
+      if(thrifty===false){
+        if('IntersectionObserver' in window){
+          var src=window.innerWidth<820?'assets/web/hero-food-sm.mp4':null;
+          var io=new IntersectionObserver(function(en){
+            for(var i=0;i<en.length;i++){
+              if(en[i].isIntersecting){
+                if(v.getAttribute('data-loaded')===null){
+                  v.setAttribute('data-loaded','1');
+                  if(src){v.querySelector('source').setAttribute('src',src);}
+                  v.preload='auto';
+                  v.addEventListener('canplay',function(){var p=v.play();if(p){if(p.catch){p.catch(function(){});}}},{once:true});
+                  v.load();
+                }else{var p2=v.play();if(p2){if(p2.catch){p2.catch(function(){});}}}
+              }else{v.pause();}
+            }
+          },{threshold:0.2});
+          io.observe(v);
+        }
+      }
+    }
+  }
+})();
+</script>
+
+<script>
+(function(){
+  /* Scroll-triggered entrances. Nothing is hidden until script is running to put it back,
+     and the failsafe rescues only what the reader can actually see, so off-screen sections
+     keep waiting for the scroll instead of playing to an empty room. */
+  if(!('IntersectionObserver' in window)){return;}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+
+  var groups=[
+    ['.hero__in > div',0],['.hero__tv',0],
+    ['.slab',0],
+    ['.sec > .wrap > .head',0],
+    ['.where',0],['.cats',0],['.tray',0],['.getpdf',0],
+    ['.kit',1],
+    ['.faq details',1],
+    ['.sec__cta',0],
+    ['.about img',0],['.about > div',0],
+    ['.foot__g > div',1]
+  ];
+  var all=[];
+  for(var g=0;g<groups.length;g++){
+    var nodes=[].slice.call(document.querySelectorAll(groups[g][0]));
+    for(var i=0;i<nodes.length;i++){
+      nodes[i].classList.add('reveal');
+      if(groups[g][1]===1){nodes[i].classList.add('reveal-d'+((i%4)+1));}
+      all.push(nodes[i]);
+    }
+  }
+  if(all.length===0){return;}
+  document.documentElement.classList.add('js-anim');
+
+  var waiting=all.slice();
+  function show(el){
+    el.classList.add('is-in');
+    var at=waiting.indexOf(el);
+    if(at>-1){waiting.splice(at,1);}
+  }
+  function showAll(){while(waiting.length){show(waiting[0]);}}
+
+  var io=new IntersectionObserver(function(en,obs){
+    for(var i=0;i<en.length;i++){
+      if(en[i].isIntersecting){show(en[i].target);obs.unobserve(en[i].target);}
+    }
+  },{rootMargin:'0px 0px -10% 0px',threshold:0.08});
+  for(var k=0;k<all.length;k++){io.observe(all[k]);}
+
+  var sweep=window.setInterval(function(){
+    if(waiting.length===0){window.clearInterval(sweep);return;}
+    var h=window.innerHeight||document.documentElement.clientHeight;
+    for(var i=waiting.length-1;i>=0;i--){
+      var r=waiting[i].getBoundingClientRect();
+      if(r.bottom>0){if(r.top<h){show(waiting[i]);}}
+    }
+  },1200);
+  window.addEventListener('pagehide',showAll);
+  window.addEventListener('beforeprint',showAll);
+
+  var order=document.getElementById('order');
+  if(order){
+    var oio=new IntersectionObserver(function(en,obs){
+      for(var i=0;i<en.length;i++){
+        if(en[i].isIntersecting){order.classList.add('is-live');obs.disconnect();}
+      }
+    },{rootMargin:'0px 0px -10% 0px',threshold:0.04});
+    oio.observe(order);
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Reggae Pot Jamaican Grill","servesCuisine":"Jamaican","url":"https://reggaepotjamaicangrill.com/","telephone":"+1-303-997-5623","address":{"@type":"PostalAddress","streetAddress":"7562 S University Blvd Unit C","addressLocality":"Centennial","addressRegion":"CO","postalCode":"80122","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"11:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"21:00"}],"hasMenu":"https://reggaepotjamaicangrill.com/our-menu/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Reggae Pot Jamaican Grill","servesCuisine":"Jamaican","url":"https://reggaepotjamaicangrill.com/","telephone":"+1-720-410-2956","address":{"@type":"PostalAddress","streetAddress":"2243 S Monaco St Pkwy #104","addressLocality":"Denver","addressRegion":"CO","postalCode":"80222","addressCountry":"US"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"11:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"11:00","closes":"21:00"}],"hasMenu":"https://reggaepotjamaicangrill.com/our-menu/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Reggae Pot Jamaican Grill","url":"https://reggaepotjamaicangrill.com/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Where is Reggae Pot Jamaican Grill located?","acceptedAnswer":{"@type":"Answer","text":"There are two kitchens in the south Denver metro. The Centennial kitchen is at 7562 S University Blvd Unit C, Centennial, CO 80122. The Denver kitchen is at 2243 S Monaco St Pkwy #104, Denver, CO 80222."}},
+{"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Both kitchens open at 11am. Monday to Thursday they close at 8pm, and Friday and Saturday they close at 9pm. The Centennial kitchen is open on Sunday and the Denver kitchen is closed on Sunday."}},
+{"@type":"Question","name":"Can I order Jamaican food online for pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes. Build your tray on the homepage, then send it to the kitchen you are collecting from. Your order goes in the moment you confirm it, so it is cooked to your pickup time rather than started when you walk in."}},
+{"@type":"Question","name":"Do the two kitchens have the same menu and prices?","acceptedAnswer":{"@type":"Answer","text":"The menus are close but not identical, and two dishes cost slightly more at the Denver kitchen. Prices follow whichever counter you have selected and the difference is marked on the line."}},
+{"@type":"Question","name":"What is the most popular dish?","acceptedAnswer":{"@type":"Answer","text":"Jerk chicken and oxtail are the two plates ordered most. Jerk chicken is marinated overnight in scotch bonnet and pimento then finished on the grill, and oxtail is stewed down until it gives up the bone. Both come with two sides."}},
+{"@type":"Question","name":"Do you have vegan options?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is a set of vegan dishes on the menu alongside the meat plates, and the fresh homemade juices are made in house. Vegan items are marked in the menu."}},
+{"@type":"Question","name":"Do you cater events in Denver?","acceptedAnswer":{"@type":"Answer","text":"Yes. Catering runs across the Denver metro for offices, churches and family gatherings, with trays of jerk chicken, curry goat, rice and peas and festival. Call the Centennial kitchen on (303) 997-5623 to plan it."}},
+{"@type":"Question","name":"What is ackee and salt fish?","acceptedAnswer":{"@type":"Answer","text":"It is the national dish of Jamaica: ackee, a soft yellow fruit, cooked down with salted cod, peppers and onion. It is on the Reggae Pot menu every day."}}
+]}
+</script>
+
+</body>
+</html>
