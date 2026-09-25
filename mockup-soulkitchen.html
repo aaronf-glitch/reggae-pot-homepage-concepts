@@ -7,7 +7,7 @@
 <meta name="description" content="Order Jamaican food online from Reggae Pot Jamaican Grill. Jerk chicken, curry goat and oxtail from our Centennial and Denver kitchens. Order ahead and skip the line.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
    REGGAE POT, light.
@@ -44,8 +44,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
 .eyebrow{display:block;font:700 11px/1 Archivo,sans-serif;letter-spacing:.32em;
   text-transform:uppercase;color:var(--red-d)}
-.script{font-family:Caveat,cursive;font-weight:700;text-transform:none;letter-spacing:0;
-  color:var(--red)}
+.script{font:700 13px/1.2 Archivo,sans-serif;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--red-d)}
 
 /* the flag running green, yellow, red */
 .stripe{height:6px;display:grid;grid-template-columns:repeat(3,1fr)}
@@ -113,7 +113,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
   display:grid;justify-items:center;gap:clamp(18px,2.2vw,26px)}
 .hero__in{position:relative;z-index:1;max-width:min(920px,100%);margin:0 auto;
   padding-inline:var(--gut);text-align:center}
-.hero .script{display:block;font-size:clamp(26px,3vw,40px);color:#FFD64A}
+.hero .script{display:block;font-size:clamp(12px,1.1vw,14px);margin-bottom:14px;color:#FFD64A}
 .hero h1{margin-top:6px;font-size:clamp(48px,8.6vw,120px);color:#FFFFFF}
 .hero h1 span{display:block}
 .hero h1 .gr{color:#4FD87E}
@@ -186,6 +186,21 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 
 /* ---------- the questions people actually type ---------- */
 .faq{max-width:860px;margin:0 auto;display:grid;gap:10px}
+.faqx{max-width:1400px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.faqx .head{text-align:left;max-width:none;margin:0 0 clamp(24px,3vw,36px)}
+.faqx .head h2::after{margin-left:0}
+.faqx .faq{max-width:none}
+.faqx__logo{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(22px,2.6vw,34px);}
+.faqx__logo img{width:100%;max-width:580px;height:auto}
+#faq{background:var(--green-d)}
+#faq .eyebrow{color:var(--yellow)}
+#faq .head h2{color:#FFFFFF}
+#faq .btn--red{border-color:#FFFFFF}
+#faq .head h2::after{box-shadow:0 0 0 2px #FFFFFF}
+@media (max-width:900px){
+  .faqx{grid-template-columns:minmax(0,1fr)}
+  .faqx__logo img{width:min(100%,380px)}
+}
 .faq details{background:var(--paper);border:2px solid var(--line);border-radius:14px;
   padding:0 clamp(14px,2vw,22px)}
 .faq summary{cursor:pointer;list-style:none;padding:17px 0;
@@ -458,11 +473,11 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 
 /* ---------- the order bar that follows you on a phone ---------- */
 .dock{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;
-  background:var(--red-d);border-top:3px solid var(--ink);padding:10px var(--gut);
+  background:var(--ink);border-top:3px solid var(--red-d);padding:10px var(--gut);
   align-items:center;justify-content:space-between;gap:12px}
 .dock b{font:400 17px/1 Anton,sans-serif;text-transform:uppercase;color:#FFFFFF;letter-spacing:.03em}
 .dock span{display:block;font:600 10px/1.3 Archivo,sans-serif;letter-spacing:.13em;
-  text-transform:uppercase;color:#F6D9D5}
+  text-transform:uppercase;color:#D8D1C2}
 
 /* Hover belongs to a mouse. On a touch screen a tap fires it and the state sticks. */
 @media (hover:hover) and (pointer:fine){
@@ -487,6 +502,11 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 @media (max-width:1024px){
   .nav{display:none}
   .burger{display:block}
+  .hdr.is-open .nav{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;
+    top:100%;left:0;right:0;background:var(--cream);border-bottom:2px solid var(--ink);
+    padding:8px var(--gut) 18px;box-shadow:0 18px 30px rgba(20,18,16,.14)}
+  .hdr.is-open .nav a:not(.btn){min-height:48px;border-bottom:1px solid var(--line);font-size:13px}
+  .hdr.is-open .nav .btn{margin-top:14px;min-height:48px}
   .about{grid-template-columns:minmax(0,1fr)}
   .foot__g{grid-template-columns:repeat(2,minmax(0,1fr))}
   .foot__mark{grid-column:1 / -1}
@@ -643,9 +663,78 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
   *{transition-duration:1ms !important}
   .js-anim .reveal{opacity:1 !important;transform:none !important}
 }
+/* ---------- intro splash, shown on every load like turnkeypoolbuilders.com ---------- */
+body.splash-lock{overflow:hidden}
+.splash{position:fixed;inset:0;z-index:200;background:#FFFFFF;display:flex;align-items:center;
+  justify-content:center;opacity:1;transition:opacity .6s ease;
+  /* failsafe: gone at 6s even if the script never runs */
+  animation:splashOut .6s ease 6s forwards}
+.splash.hide{opacity:0;pointer-events:none}
+.splash-inner{width:min(620px,90vw);text-align:center}
+.splash-vid{display:block;width:100%;height:auto;mix-blend-mode:multiply;animation:splashEmerge .9s cubic-bezier(.22,1,.36,1) both}
+.splash-line{width:214px;height:4px;margin:16px auto 14px;border-radius:4px;overflow:hidden;background:var(--line)}
+.splash-line i{display:block;height:100%;width:0;
+  background:linear-gradient(90deg,var(--green) 0 33.3%,var(--yellow) 33.3% 66.6%,var(--red-d) 66.6%) 0 0/214px 100% no-repeat;
+  animation:splashLoad 2.8s cubic-bezier(.4,0,.2,1) .2s both}
+.splash-tag{font:700 11px/1.4 Archivo,sans-serif;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink-2);animation:splashRise .8s ease .5s both}
+.splash-skip{position:absolute;right:16px;top:14px;display:inline-flex;align-items:center;min-height:44px;
+  padding:0 18px;border-radius:99px;background:transparent;border:2px solid var(--line);color:var(--ink-2);
+  font:700 11px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+.splash-skip:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.splash-skip:hover{border-color:var(--ink);color:var(--ink)}}
+@keyframes splashEmerge{from{opacity:0;transform:translateY(18px) scale(.95)}to{opacity:1;transform:none}}
+@keyframes splashLoad{from{width:0}to{width:100%}}
+@keyframes splashRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes splashOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+@media (max-width:600px){.splash-tag{font-size:10px;letter-spacing:.2em}}
+@media (prefers-reduced-motion:reduce){
+  .splash{transition:none}
+  .splash-vid,.splash-tag{animation:none}
+  .splash-line i{animation:none;width:100%}
+}
 </style>
 </head>
 <body>
+
+<div class="splash" id="splash" aria-label="Reggae Pot Jamaican Grill">
+  <button class="splash-skip" type="button" id="splashSkip">Skip intro</button>
+  <div class="splash-inner">
+    <video class="splash-vid" autoplay muted loop playsinline preload="auto" width="1040" height="710"
+      poster="assets/web/logo-intro-poster.webp" aria-hidden="true">
+      <source src="assets/web/logo-intro.mp4" type="video/mp4">
+    </video>
+    <div class="splash-line" aria-hidden="true"><i></i></div>
+    <div class="splash-tag">Centennial and Denver, Colorado</div>
+  </div>
+</div>
+<script>
+(function(){
+  var s=document.getElementById('splash');
+  if(!s){return;}
+  document.body.classList.add('splash-lock');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var conn=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+  var v=s.querySelector('video');
+  if(v){
+    if(reduce||(conn&&conn.saveData)){v.removeAttribute('autoplay');try{v.pause();}catch(e){}}
+    else{var p=v.play();if(p&&p.catch){p.catch(function(){});}}
+  }
+  var done=false,timer;
+  function onKey(e){if(e.key==='Escape'||e.key==='Enter'||e.key===' '){close();}}
+  function close(){
+    if(done){return;}
+    done=true;clearTimeout(timer);
+    s.classList.add('hide');
+    document.body.classList.remove('splash-lock');
+    document.removeEventListener('keydown',onKey);
+    setTimeout(function(){try{if(v){v.pause();}}catch(e){}if(s.parentNode){s.parentNode.removeChild(s);}},650);
+  }
+  document.addEventListener('keydown',onKey);
+  s.addEventListener('click',close);
+  timer=setTimeout(close,reduce?400:3200);
+})();
+</script>
 
 <div class="util">
   <div class="util__in">
@@ -661,15 +750,17 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
     <a class="mark" href="#top">
       <img src="assets/logo/reggae-pot-logo-horizontal.png" alt="Reggae Pot Jamaican Grill" width="797" height="119">
     </a>
-    <nav class="nav" aria-label="Main">
+    <nav class="nav" id="mainnav" aria-label="Main">
+      <a href="#top">Home</a>
       <a href="#menu">Menu</a>
       <a href="#food">Food</a>
       <a href="#kitchens">Kitchens</a>
       <a href="#catering">Catering</a>
       <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
       <a class="btn btn--red btn--sm" href="#menu">Order Online <span class="cnt" id="cnt" hidden>0</span></a>
     </nav>
-    <button class="burger" type="button" aria-label="Open menu">
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainnav">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -712,8 +803,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
       </div>
       <div class="band__c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
-        <b>No Wait</b>
-        <span>It is cooked to your pickup time, not to the time you arrive.</span>
+        <b>Order Ahead for Pickup</b>
+        <span>Schedule it for the time that suits you, then collect it at the counter.</span>
       </div>
       <div class="band__c">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 10-14 0c0 5.3 7 11 7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
@@ -735,56 +826,56 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 
       <div class="fw">
         <figure class="fw__t fw__t--a">
-          <img src="assets/sq/plates.webp" alt="Two blue plates, one of oxtail with rice and peas, one of jerk chicken salad" width="760" height="760" loading="lazy">
+          <img src="assets/sq/plates.webp" alt="Two blue plates, one of oxtail with rice and peas, one of jerk chicken salad" width="760" height="760" loading="lazy" style="object-position:30% 90%">
           <figcaption>
             <b>Oxtail</b>
             <span class="fw__sub">Stewed down slow until it gives up the bone</span>
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--b">
-          <img src="assets/appetite/glossy.webp" alt="Jerk chicken pieces in sauce on a blue plate" width="1000" height="562" loading="lazy">
+          <img src="assets/sq/ribs.webp" alt="Jerk BBQ ribs glazed in sauce on a blue plate" width="760" height="760" loading="lazy" style="object-position:50% 70%">
           <figcaption>
             <b>Jerk BBQ Ribs</b>
             
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--c">
-          <img src="assets/sq/wings.webp" alt="Glazed jerk chicken wings on a blue plate" width="760" height="760" loading="lazy">
+          <img src="assets/sq/wings.webp" alt="Glazed jerk chicken wings on a blue plate" width="760" height="760" loading="lazy" style="object-position:50% 75%">
           <figcaption>
             <b>Jerk Wings</b>
             
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--d">
-          <img src="assets/sq/ackee.webp" alt="Ackee and saltfish cooking in a black pan" width="760" height="760" loading="lazy">
+          <img src="assets/sq/ackee.webp" alt="Ackee and saltfish cooking in a black pan" width="760" height="760" loading="lazy" style="object-position:50% 72%">
           <figcaption>
             <b>Ackee and Salt Fish</b>
             
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--e">
-          <img src="assets/appetite/table.webp" alt="Blue plates of curry chicken, jerk ribs and sides set out on a table" width="1000" height="562" loading="lazy">
+          <img src="assets/sq/curry.webp" alt="Curry chicken with potato and carrot on a blue plate" width="760" height="760" loading="lazy" style="object-position:72% 50%">
           <figcaption>
             <b>Curry Chicken</b>
             
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--f">
-          <img src="assets/frames/f1.webp" alt="Overhead view of blue plates with fried plantain, rice and peas, salad and mango" width="760" height="760" loading="lazy">
+          <img src="assets/web/plantains-plate.webp" alt="Ripe fried plantains with oxtail and rice and peas on a blue plate" width="558" height="330" loading="lazy" style="object-position:40% 45%">
           <figcaption>
             <b>Ripe Fried Plantains</b>
             
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--g">
-          <img src="assets/sq/patty.webp" alt="Hands breaking open a golden beef patty" width="760" height="760" loading="lazy">
+          <img src="assets/sq/patty.webp" alt="Hands breaking open a golden beef patty" width="760" height="760" loading="lazy" style="object-position:45% 40%">
           <figcaption>
             <b>Beef Patty</b>
             
           </figcaption>
         </figure>
         <figure class="fw__t fw__t--h">
-          <img src="assets/frames/f2.webp" alt="Overhead view of curry chicken, jerk ribs and jerk wings on blue plates" width="760" height="760" loading="lazy">
+          <img src="assets/web/spread.webp" alt="Overhead spread of jerk chicken, oxtail, curry chicken, ribs, salad and sides on blue plates" width="900" height="1640" loading="lazy" style="object-position:50% 38%">
           <figcaption>
             <b>The Whole Table</b>
             <span class="fw__sub">Catering for offices, churches and family gatherings</span>
@@ -794,7 +885,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
       </div>
 
       <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
-        <a class="btn btn--red" href="#menu">Build Your Tray</a>
+        <a class="btn btn--red" href="#menu">Order Online</a>
       </p>
     </div>
   </section>
@@ -805,8 +896,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
       <div class="head">
         <span class="eyebrow">Feeling Hungry</span>
         <h2>Build Your Tray</h2>
-        <p>Tap to add. The total updates as you go, then you hand the tray straight to your
-          kitchen. Every price is the price you pay at the counter.</p>
+        <p>Tap to add and the total updates as you go. Prices match each kitchen's online menu,
+          and checkout opens that kitchen's ordering page.</p>
       </div>
 
       <div class="order__in">
@@ -844,9 +935,9 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
           </div>
           <div class="tray__f">
             <div class="tray__t"><span>Total</span><b id="total" aria-live="polite">$0.00</b></div>
-            <a class="btn btn--red" id="checkout" href="https://reggaepotjamaicangrill.com/order-centennial">Take it to Checkout</a>
-            <p class="tray__note">Your tray opens the kitchen's own ordering page, where you confirm
-              and pay. Prices shown are that kitchen's menu.</p>
+            <a class="btn btn--red" id="checkout" href="https://reggaepotjamaicangrill.com/order/centennial/">Take it to Checkout</a>
+            <p class="tray__note">Checkout opens the kitchen's own ordering page, where you add your
+              dishes and pay. Use this tray as your list.</p>
           </div>
         </aside>
       </div>
@@ -890,7 +981,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
         </div>
       </div>
       <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
-        <a class="btn btn--red" href="#menu">See the Full Menu and Order</a>
+        <a class="btn btn--red" href="#menu">Order Online</a>
       </p>
     </div>
   </section>
@@ -911,7 +1002,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
           <div class="kit__b">
             <h3>Centennial</h3>
             <p>7562 S University Blvd Unit C, Centennial, CO 80122.<br>Mon to Thu 11am to 8pm, Fri and Sat 11am to 9pm, open Sunday.</p>
-            <a class="btn btn--red" href="https://reggaepotjamaicangrill.com/order-centennial">Order From Centennial</a>
+            <a class="btn btn--red" href="https://reggaepotjamaicangrill.com/order/centennial/">Order Online: Centennial</a>
           </div>
         </article>
         <article class="kit">
@@ -919,7 +1010,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
           <div class="kit__b">
             <h3>Denver</h3>
             <p>2243 S Monaco St Pkwy #104, Denver, CO 80222.<br>Mon to Thu 11am to 8pm, Fri and Sat 11am to 9pm, closed Sunday.</p>
-            <a class="btn btn--red" href="https://reggaepotjamaicangrill.com/order-denver">Order From Denver</a>
+            <a class="btn btn--red" href="https://reggaepotjamaicangrill.com/order/denver/">Order Online: Denver</a>
           </div>
         </article>
       </div>
@@ -937,7 +1028,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
           <p>Oxtail goes on early and stays on until it gives up the bone. Jerk sits overnight in
             scotch bonnet and pimento before it ever sees the grill. Nothing is rushed to the
             counter, which is exactly why ordering ahead is worth it.</p>
-          <p class="sec__cta" style="margin-top:20px"><a class="btn btn--yellow" href="#menu">See What Is On</a></p>
+          <p class="sec__cta" style="margin-top:20px"><a class="btn btn--red" href="#menu">Order Online</a></p>
         </div>
       </div>
     </div>
@@ -952,14 +1043,15 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
         <p>Trays of jerk chicken, curry goat, rice and peas and festival for offices, churches
           and family gatherings. Tell us the headcount and the date and we will work the menu
           around it, including the vegan dishes so nobody at the table is left out.</p>
-        <p class="sec__cta" style="margin-top:22px"><a class="btn btn--red" href="tel:+13039975623">Call to Plan Catering</a></p>
+        <p class="sec__cta" style="margin-top:22px"><a class="btn btn--yellow" href="tel:+13039975623">Call to Plan Catering</a></p>
       </div>
     </div>
   </section>
 
   <!-- ============ FAQ ============ -->
   <section class="sec sec--paper" id="faq">
-    <div class="wrap">
+    <div class="wrap faqx">
+      <div class="faqx__main">
       <div class="head">
         <span class="eyebrow">Before You Order</span>
         <h2>Questions We Get Asked</h2>
@@ -979,15 +1071,13 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
         </details>
         <details>
           <summary>Can I order Jamaican food online for pickup?</summary>
-          <p>Yes. Build your tray on this page, then send it to the kitchen you are collecting
-            from. Your order goes in the moment you confirm it, so it is cooked to your pickup
-            time rather than started when you walk in.</p>
+          <p>Yes. Choose the kitchen you are collecting from and order online through its ordering
+            page. You can schedule the order for a pickup time that suits you.</p>
         </details>
         <details>
           <summary>Do the two kitchens have the same menu and prices?</summary>
-          <p>The menus are close but not identical, and two dishes cost slightly more at the
-            Denver kitchen. The prices on this page follow whichever counter you have selected,
-            and the difference is marked on the line.</p>
+          <p>The menus are close but not identical. A few dishes are only on one kitchen's menu,
+            and the prices on this page follow whichever counter you have selected.</p>
         </details>
         <details>
           <summary>What is the most popular dish?</summary>
@@ -1014,16 +1104,18 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
             of the traditional dishes the kitchen is known for.</p>
         </details>
       </div>
-      <p class="sec__cta" style="text-align:center;margin-top:clamp(26px,3.4vw,40px)">
-        <a class="btn btn--red" href="#menu">Build Your Tray</a>
-      </p>
+      </div>
+      <aside class="faqx__logo">
+        <img src="assets/logo/reggae-pot-logo-full-trim.png" alt="Reggae Pot, Authentic Jamaican Grill" width="633" height="533" loading="lazy">
+        <p class="sec__cta"><a class="btn btn--red" href="#menu">Order Online</a></p>
+      </aside>
     </div>
   </section>
 
 </main>
 
 <div class="stripe" aria-hidden="true"><i></i><i></i><i></i></div>
-<footer class="foot">
+<footer class="foot" id="contact">
   <div class="foot__bg" aria-hidden="true">
     <video id="footvid" muted loop playsinline preload="none" poster="assets/web/flames-poster.webp">
       <source src="assets/web/flames.mp4" type="video/mp4">
@@ -1053,8 +1145,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
         <h3 class="foot__h">Order</h3>
         <ul>
           <li><a href="#menu">The Menu</a></li>
-          <li><a href="https://reggaepotjamaicangrill.com/order-centennial">Order From Centennial</a></li>
-          <li><a href="https://reggaepotjamaicangrill.com/order-denver">Order From Denver</a></li>
+          <li><a href="https://reggaepotjamaicangrill.com/order/centennial/">Order Online: Centennial</a></li>
+          <li><a href="https://reggaepotjamaicangrill.com/order/denver/">Order Online: Denver</a></li>
           <li><a href="#catering">Catering</a></li>
           <li><a href="#faq">Questions</a></li>
           <li><a href="assets/reggae-pot-menu.pdf" target="_blank" rel="noopener" type="application/pdf">Download the Menu (PDF)</a></li>
@@ -1068,7 +1160,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 
 <div class="dock">
   <div><b id="mtotal">$0.00</b><span>Your tray</span></div>
-  <a class="btn btn--yellow btn--sm" href="#menu">Order Online</a>
+  <a class="btn btn--red btn--sm" href="#menu">Order Online</a>
 </div>
 
 <script>
@@ -1088,8 +1180,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
    {c:'Meals',   n:'Curry Chicken Roti',     p:19.99, pDenver:18.00,     d:'Curry chicken wrapped in a roti.'},
    {c:'Meals',   n:'Brown Stew Chicken',     p:18.99,                    d:'Browned down and stewed with the gravy.'},
    {c:'Meals',   n:'Ackee & Salt Fish',      p:24.00, ph:'ackee',        d:"Jamaica's national dish, with peppers and onion."},
-   {c:'Meals',   n:'Escoveitch Red Snapper', p:39.99, pDenver:34.99,     d:'Whole fish with peppers and vinegar.'},
-   {c:'Meals',   n:'Curry Potatoes & Veggies',p:16.00, veg:1,            d:'Curried potato and vegetables. Two sides.'},
+   {c:'Meals',   n:'Escoveitch Red Snapper', p:39.99,     d:'Whole fish with peppers and vinegar.'},
+   {c:'Meals',   n:'Curry Potatoes & Veggies',p:16.00, veg:1, cOnly:1,            d:'Curried potato and vegetables. Two sides.'},
 
    {c:'Starters',n:'Jerk Wings Starter',     p:8.99,  ph:'wings', heat:1,d:'Marinated overnight, grilled to order.'},
    {c:'Starters',n:'Fried Jerk Wings',       p:8.99,  heat:1,            d:'The same wings, fried instead of grilled.'},
@@ -1104,8 +1196,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
    {c:'Lunch',   n:'Lunch Jerk Chicken',     p:15.00, heat:1,            d:'The lunch portion, off the grill.'},
    {c:'Lunch',   n:'Lunch Curry Chicken',    p:12.99,                    d:'The lunch portion, curried.'},
    {c:'Lunch',   n:'Lunch Brown Stew',       p:12.99,                    d:'The lunch portion, browned down.'},
-   {c:'Lunch',   n:'Jerk Chicken Salad',     p:14.00, ph:'salad',        d:'Jerk chicken over leaves, tomato and cucumber.'},
-   {c:'Lunch',   n:'Jerk Shrimp Salad',      p:15.00,                    d:'Jerk shrimp over leaves, tomato and cucumber.'},
+   {c:'Lunch',   n:'Jerk Chicken Salad',     p:14.00, ph:'salad', cOnly:1,        d:'Jerk chicken over leaves, tomato and cucumber.'},
+   {c:'Lunch',   n:'Jerk Shrimp Salad',      p:15.00, cOnly:1,                    d:'Jerk shrimp over leaves, tomato and cucumber.'},
    {c:'Lunch',   n:'Oxtail Cheese Steak',    p:18.00,                    d:'Oxtail, peppers and cheese in a roll.'},
    {c:'Lunch',   n:'Jerk Chicken Cheese Steak',p:16.00, heat:1,          d:'Jerk chicken, peppers and cheese in a roll.'},
 
@@ -1125,7 +1217,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
    {c:'Sides',   n:'Collar Green',           p:6.99,                     d:'Slow-cooked greens.'},
    {c:'Sides',   n:'Potato Salad',           p:5.50,                     d:'House potato salad.'},
    {c:'Sides',   n:'Mac Salad',              p:5.50,                     d:'House macaroni salad.'},
-   {c:'Sides',   n:'Veggie Salad',           p:4.00,  veg:1,             d:'Leaves, tomato and cucumber.'},
+   {c:'Sides',   n:'Veggie Salad',           p:4.00,  veg:1, cOnly:1,             d:'Leaves, tomato and cucumber.'},
    {c:'Sides',   n:'French Fries',           p:3.50,  veg:1,             d:'Straight-cut fries.'},
    {c:'Sides',   n:'White Rice',             p:4.25,  veg:1,             d:'Plain steamed rice.'},
    {c:'Sides',   n:'Corn Bread',             p:4.50,                     d:'House corn bread.'},
@@ -1155,8 +1247,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
   ];
 
   var PLACES={
-    centennial:{name:'Centennial',url:'https://reggaepotjamaicangrill.com/order-centennial'},
-    denver:{name:'Denver',url:'https://monaco.reggaepotjamaicangrill.com/'}
+    centennial:{name:'Centennial',url:'https://reggaepotjamaicangrill.com/order/centennial/'},
+    denver:{name:'Denver',url:'https://reggaepotjamaicangrill.com/order/denver/'}
   };
   var HOURS={
     centennial:{0:[11,19],1:[11,20],2:[11,20],3:[11,20],4:[11,20],5:[11,21],6:[11,21]},
@@ -1180,6 +1272,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
     if(state.loc==='denver'){if(it.pDenver){return it.pDenver;}}
     return it.p;
   }
+  function onMenu(it){return !(state.loc==='denver'&&it.cOnly);}
   function money(n){return '$'+n.toFixed(2);}
 
   /* ---------- open or closed, in the restaurant's own timezone ---------- */
@@ -1233,6 +1326,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
     for(var i=0;i<MENU.length;i++){
       var it=MENU[i];
       if(it.c!==state.cat){continue;}
+      if(!onMenu(it)){continue;}
       var id=idOf(it),qty=state.tray[id]?state.tray[id].q:0;
       var li=document.createElement('li');
       li.className='item'+(qty>0?' is-in':'');
@@ -1282,6 +1376,7 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
       if(!Object.prototype.hasOwnProperty.call(state.tray,id)){continue;}
       var it=lookup(id);
       if(!it){continue;}
+      if(!onMenu(it)){continue;}
       any=true;
       var row=state.tray[id],line=price(it)*row.q;
       total+=line;count+=row.q;
@@ -1326,6 +1421,14 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
   try{drawStatus();}catch(e){}
   drawCats();drawItems();drawTray();
 
+
+  /* ---------- mobile menu ---------- */
+  var hdr=document.querySelector('.hdr'),burger=document.querySelector('.burger');
+  function setMenu(open){hdr.classList.toggle('is-open',open);burger.setAttribute('aria-expanded',open?'true':'false');burger.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  burger.addEventListener('click',function(){setMenu(!hdr.classList.contains('is-open'));});
+  [].forEach.call(document.querySelectorAll('#mainnav a'),function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){setMenu(false);}});
+
   /* ---------- measure the thing the pilot is paid on ---------- */
   function track(n,p){if(typeof window.gtag==='function'){try{window.gtag('event',n,p);}catch(e){}}}
   checkout.addEventListener('click',function(){
@@ -1360,8 +1463,8 @@ h1,h2,h3{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;line-heigh
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Where is Reggae Pot Jamaican Grill located?","acceptedAnswer":{"@type":"Answer","text":"There are two kitchens in the south Denver metro. The Centennial kitchen is at 7562 S University Blvd Unit C, Centennial, CO 80122. The Denver kitchen is at 2243 S Monaco St Pkwy #104, Denver, CO 80222."}},
 {"@type":"Question","name":"What are your hours?","acceptedAnswer":{"@type":"Answer","text":"Both kitchens open at 11am. Monday to Thursday they close at 8pm, and Friday and Saturday they close at 9pm. The Centennial kitchen is open on Sunday and the Denver kitchen is closed on Sunday."}},
-{"@type":"Question","name":"Can I order Jamaican food online for pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes. Build your tray on the homepage, then send it to the kitchen you are collecting from. Your order goes in the moment you confirm it, so it is cooked to your pickup time rather than started when you walk in."}},
-{"@type":"Question","name":"Do the two kitchens have the same menu and prices?","acceptedAnswer":{"@type":"Answer","text":"The menus are close but not identical, and two dishes cost slightly more at the Denver kitchen. Prices follow whichever counter you have selected and the difference is marked on the line."}},
+{"@type":"Question","name":"Can I order Jamaican food online for pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose the kitchen you are collecting from and order online through its ordering page. You can schedule the order for a pickup time that suits you."}},
+{"@type":"Question","name":"Do the two kitchens have the same menu and prices?","acceptedAnswer":{"@type":"Answer","text":"The menus are close but not identical. A few dishes are only on one kitchen's menu, and the prices on this page follow whichever counter you have selected."}},
 {"@type":"Question","name":"What is the most popular dish?","acceptedAnswer":{"@type":"Answer","text":"Jerk chicken and oxtail are the two plates ordered most. Jerk chicken is marinated overnight in scotch bonnet and pimento then finished on the grill, and oxtail is stewed down until it gives up the bone. Both come with two sides."}},
 {"@type":"Question","name":"Do you have vegan options?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is a set of vegan dishes on the menu alongside the meat plates, and the fresh homemade juices are made in house. Vegan items are marked in the menu."}},
 {"@type":"Question","name":"Do you cater events in Denver?","acceptedAnswer":{"@type":"Answer","text":"Yes. Catering runs across the Denver metro for offices, churches and family gatherings, with trays of jerk chicken, curry goat, rice and peas and festival. Call the Centennial kitchen on (303) 997-5623 to plan it."}},
